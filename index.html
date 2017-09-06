@@ -1,0 +1,3331 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Титан арена  &raquo; Карта&nbsp;центра</title>
+	<link rel="icon" href="" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://titanarena.ru/wp-content/themes/titanarena/favicon.ico" />
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic,500italic,700,700italic,900,900italic,300italic,300|Lato:400,300,300italic,400italic,700,700italic,900,900italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/style.css" />
+	<link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/fancybox.css" />
+
+	<link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/css/animations.css" />
+	<link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/tipsy/tipsy.css" />
+	<link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/qtip/jquery.qtip.css" />
+	<link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/map.css?1" />
+	<!--[if IE 8]>
+	<link rel="stylesheet" src="http://titanarena.ru/wp-content/themes/titanarena/ie.css" >
+	<![endif]-->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/slides.min.jquery.js"></script>
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/jquery.autocolumnlist.js"></script>
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/social-likes.min.js"></script>
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/other.js"></script>
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/fancybox.js"></script>
+	<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/tabby/tabby.js"></script>
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/tipsy/jquery.tipsy.js"></script>
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/qtip/imagesloaded.pkg.min.js"></script>
+	<script src="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/qtip/jquery.qtip.js"></script>
+
+	<script type="text/javascript">
+        ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+        var myMap; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
+        function init () { // функция - собиралка карты и фигни
+            myMap = new ymaps.Map("map", { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"
+                    center: [64.5417,40.5349], // ну тут центр
+                    behaviors: ['default'], // скроллинг колесом
+                    zoom: 16 // тут масштаб
+                });
+            myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
+        		.add('typeSelector') //Список типов карты
+	        /* Создаем кастомные метки */
+	        myPlacemark0 = new ymaps.Placemark([64.5417,40.5349], { // Создаем метку с такими координатами и суем в переменную
+	                balloonContent: '<p class="text-map"><span>г. Архангельск</span>ул. Воскресенская, 20</p>' // здесь содержимое балуна в формате html, все стили в css
+	            	}, {
+	            	iconImageHref: 'http://titanarena.ru/wp-content/themes/titanarena/images/tick-map.png', // картинка иконки
+	            	iconImageSize: [233, 215], // размер иконки
+	            	iconImageOffset: [-55,-150], // позиция иконки
+	                balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
+	                balloonLayout: "", // указываем что содержимое балуна кастомная херь
+	                balloonImageHref: '', // Картинка заднего фона балуна
+	                balloonImageOffset: [], // смещание балуна, надо подогнать под стрелочку
+	                balloonImageSize: [], // размер картинки-бэкграунда балуна
+	                balloonShadow: false,
+	                balloonAutoPan: false // для фикса кривого выравнивания
+	                });
+	        /* Добавляем */
+	        myMap.geoObjects
+	        	.add(myPlacemark0);
+	        	//.add(myPlacemark1)
+	        	//.add(myPlacemark2);
+
+	        /* Фикс кривого выравнивания кастомных балунов */
+			myMap.geoObjects.events.add([
+		        'balloonopen'
+		    ], function (e) {
+		        var geoObject = e.get('target');
+		        myMap.panTo(geoObject.geometry.getCoordinates(), {
+		                                    delay: 0
+		                                });
+		    });
+    }
+	</script>
+
+	<link rel="alternate" type="application/rss+xml" title="Титан арена &raquo; Лента комментариев к &laquo;Карта&nbsp;центра&raquo;" href="http://titanarena.ru/karta-centra/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://titanarena.ru/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-paginate-css'  href='http://titanarena.ru/wp-content/plugins/wp-paginate/wp-paginate.css?ver=1.2.5' type='text/css' media='screen' />
+<script type='text/javascript' src='http://titanarena.ru/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://titanarena.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://titanarena.ru/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://titanarena.ru/wp-includes/wlwmanifest.xml" />
+<link rel='prev' title='Фотоальбомы' href='http://titanarena.ru/fotoalbomy/' />
+<meta name="generator" content="WordPress 3.9.19" />
+<link rel='canonical' href='http://titanarena.ru/karta-centra/' />
+<link rel='shortlink' href='http://titanarena.ru/?p=4847' />
+</head>
+<body>
+		<!-- wrapper -->
+	<div class="wrapper">
+
+		<!-- header -->
+
+		<header>
+
+			<!-- ins -->
+			<div class="ins">
+
+				<!-- left-header -->
+				<div class="left-header" style="width: 350px;">
+<p class="time-header">время работы трк: 10<span>00</span>-21<span>00</span><br>Часы работы фудкорта: 10<span>00</span>-22<span>00</span>
+</p>
+					<!--<p class="time-header">время работы трк: 10<span>00</span>-21<span>00</span></p>-->
+
+					<div class="menu-menu_vverhy-container"><ul id="menu-menu_vverhy" class="menu"><li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://titanarena.ru/pokupatelyam/">Покупателям</a></li>
+<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://titanarena.ru/reklama/">Реклама</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://titanarena.ru/arendatoram/">Арендаторам</a></li>
+<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="http://titanarena.ru/kontakty/">Контакты</a></li>
+</ul></div>
+				</div>
+				<!-- end left-header -->
+
+				<!-- header-contact -->
+				<div class="header-contact">
+
+					<!--<p class="phone-num">8182 24 64 47</p>-->
+					<p class="phone-text">ул. Воскресенская, 20</p>
+					<a href="http://titanarena.ru/kontakty/">Схема проезда</a>
+
+				</div>
+				<!-- end header-contact -->
+
+				<!-- logo -->
+				<div class="logo">
+
+					<a href="http://titanarena.ru"><img src="http://titanarena.ru/wp-content/themes/titanarena/images/logo.png" alt=""></a>
+
+				</div>
+				<!-- end logo -->
+
+				<!-- nav-header -->
+				<nav class="nav-header">
+					<div class="menu-menyu-container"><ul id="menu-menyu" class="menu"><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://titanarena.ru/o-trk/">О&nbsp;ТРК</a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://titanarena.ru/brendy/">Бренды</a></li>
+<li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-424"><a href="http://titanarena.ru/novosti/">Новости</a></li>
+<li id="menu-item-5159" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4847 current_page_item menu-item-5159"><a href="http://titanarena.ru/karta-centra/">Карта&nbsp;центра</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://titanarena.ru/uslugi/">Услуги</a></li>
+<li id="menu-item-3719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3719"><a href="http://titanarena.ru/ledovaya-arena/">Ледовая&nbsp;арена</a></li>
+<li id="menu-item-4659" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4659"><a href="http://arhangelsk.mirage.ru/cinema/19/mirazh-sinema-v-trk-titan-arena.htm">Кинотеатр</a></li>
+</ul></div>				</nav>
+				<!-- end nav-header -->
+
+				<!-- search -->
+				<form method="get" id="search" action="http://titanarena.ru" class="search">
+	<input type="text" placeholder="поиск" required="required" name="s" id="s" tabindex="2"  />
+	<input type="submit" value="">
+</form>
+				<!-- end search -->
+
+			</div>
+			<!-- end ins -->
+
+					</header>
+
+		<!-- end header --><style>
+    .st2 {
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        fill: #069cd8;
+    }
+
+    .st3 {
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        fill: #b22e82;
+    }
+
+    .st4 {
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        fill: #ed8e23;
+    }
+
+    text {
+        font: 14px arial, sans-serif;
+    }
+    .st90 {
+        fill: #fff !important;
+    }
+</style>
+<!-- main -->
+<section class="main">
+
+	<div class="n-plan">
+
+		<h1>План этажей</h1>
+
+
+		<div class="n-plan__buttons tabs">
+			<div class="n-plan__buttons__button active" data-tab="#tab1"><span>1 этаж</span></div>
+			<div class="n-plan__buttons__button" data-tab="#tab2"><span>2 этаж</span></div>
+			<div class="n-plan__buttons__button" data-tab="#tab3"><span>3 этаж</span></div>
+			<div class="n-plan__buttons__button" data-tab="#tab4"><span>4 этаж</span></div>
+			<div class="n-plan__buttons__button" data-tab="#tab5"><span>5 этаж</span></div>
+		</div>
+		<!-- /.n-plan__buttons -->
+
+		<div class="n-plan__container">
+
+			<div class="tabs-content">
+				<div class="n-plan__plan tabs-pane active" id="tab1">
+
+
+					<div class="n-plan__values">
+
+						<div class="n-plan__values__container">
+
+							<div class="n-plan__values__value">
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Детские товары</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-53"></a>
+										<div class="n-plan__values__cont">
+											<p>53</p><span>ЦВЕТНОЙ</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-60"></a>
+										<div class="n-plan__values__cont">
+											<p>60</p><span>HELLO&nbsp;KITTY</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Еда, кафе, fast food</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-8"></a>
+										<div class="n-plan__values__cont">
+											<p>8</p><span>Spar</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-47"></a>
+										<div class="n-plan__values__cont">
+											<p>47</p><span>Coffee&nbsp;like</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-63"></a>
+										<div class="n-plan__values__cont">
+											<p>63</p><span>Козули</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-64"></a>
+										<div class="n-plan__values__cont">
+											<p>64</p><span>Coffeeway</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Кожгалантерея, сумки, аксессуары</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-4"></a>
+										<div class="n-plan__values__cont">
+											<p>4</p><span>FASHION&nbsp;STYLE</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-13"></a>
+										<div class="n-plan__values__cont">
+											<p>13</p><span>Klever</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-37"></a>
+										<div class="n-plan__values__cont">
+											<p>37</p><span>Leo&nbsp;Ventoni</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Косметика / Здоровье</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-1"></a>
+										<div class="n-plan__values__cont">
+											<p>1</p><span>Rive&nbsp;Gauche</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-6"></a>
+										<div class="n-plan__values__cont">
+											<p>6</p><span>Аптека&nbsp;МК</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-12"></a>
+										<div class="n-plan__values__cont">
+											<p>12</p><span>Цирюльник</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-24"></a>
+										<div class="n-plan__values__cont">
+											<p>24</p><span>Organic&nbsp;Market</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-32"></a>
+										<div class="n-plan__values__cont">
+											<p>32</p><span>Zinger</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-40"></a>
+										<div class="n-plan__values__cont">
+											<p>40</p><span>СЧАСТЛИВЫЙ&nbsp;ВЗГЛЯД</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-44"></a>
+										<div class="n-plan__values__cont">
+											<p>44</p><span>Ile de&nbsp;beaute</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-52"></a>
+										<div class="n-plan__values__cont">
+											<p>52</p><span>Водорослевый&nbsp;комбинат</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Нижнее Белье</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-30"></a>
+										<div class="n-plan__values__cont">
+											<p>30</p><span>Бюстье</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Обувь</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-10"></a>
+										<div class="n-plan__values__cont">
+											<p>10</p><span>Kari</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-14"></a>
+										<div class="n-plan__values__cont">
+											<p>14</p><span>Эконика</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-15"></a>
+										<div class="n-plan__values__cont">
+											<p>15</p><span>Amati</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-16"></a>
+										<div class="n-plan__values__cont">
+											<p>16</p><span>PODIO</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-21"></a>
+										<div class="n-plan__values__cont">
+											<p>21</p><span>Westfalika</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-35"></a>
+										<div class="n-plan__values__cont">
+											<p>35</p><span>Soho</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-36"></a>
+										<div class="n-plan__values__cont">
+											<p>36</p><span>МЕДВЕДЬ</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-38"></a>
+										<div class="n-plan__values__cont">
+											<p>38</p><span>Vitacci</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Одежда</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-23"></a>
+										<div class="n-plan__values__cont">
+											<p>23</p><span>H&#038;M</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-26"></a>
+										<div class="n-plan__values__cont">
+											<p>26</p><span>NafNaf</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-45"></a>
+										<div class="n-plan__values__cont">
+											<p>45</p><span>Modemia</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Праздничная атрибутика, подарки</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-5"></a>
+										<div class="n-plan__values__cont">
+											<p>5</p><span>Гранд&nbsp;При</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-7"></a>
+										<div class="n-plan__values__cont">
+											<p>7</p><span>Coffeeman</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-43"></a>
+										<div class="n-plan__values__cont">
+											<p>43</p><span>Мартиника</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-50"></a>
+										<div class="n-plan__values__cont">
+											<p>50</p><span>Vermont</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-54"></a>
+										<div class="n-plan__values__cont">
+											<p>54</p><span>София</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Салоны связи</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-17"></a>
+										<div class="n-plan__values__cont">
+											<p>17</p><span>Beeline</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-20"></a>
+										<div class="n-plan__values__cont">
+											<p>20</p><span>Мегафон</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-29"></a>
+										<div class="n-plan__values__cont">
+											<p>29</p><span>МТС</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-31"></a>
+										<div class="n-plan__values__cont">
+											<p>31</p><span>Связной</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-67"></a>
+										<div class="n-plan__values__cont">
+											<p>67</p><span>Yota</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-68"></a>
+										<div class="n-plan__values__cont">
+											<p>68</p><span>Tele2</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Спортивные товары</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-2"></a>
+										<div class="n-plan__values__cont">
+											<p>2</p><span>REEBOK</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Товары для дома, бытовая техника, электроника</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-9"></a>
+										<div class="n-plan__values__cont">
+											<p>9</p><span>Четыре&nbsp;лапы</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-19"></a>
+										<div class="n-plan__values__cont">
+											<p>19</p><span>ЭТИКЕТ</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-28"></a>
+										<div class="n-plan__values__cont">
+											<p>28</p><span>Клинок</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-33"></a>
+										<div class="n-plan__values__cont">
+											<p>33</p><span>REDMOND</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-41"></a>
+										<div class="n-plan__values__cont">
+											<p>41</p><span>C-Store</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-48"></a>
+										<div class="n-plan__values__cont">
+											<p>48</p><span>iSHOP</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-49"></a>
+										<div class="n-plan__values__cont">
+											<p>49</p><span>АВТОГАДЖЕТ</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-61"></a>
+										<div class="n-plan__values__cont">
+											<p>61</p><span>Сигареты,&nbsp;табак</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Услуги</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-11"></a>
+										<div class="n-plan__values__cont">
+											<p>11</p><span>Ремонт цифровой&nbsp;техники</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-56"></a>
+										<div class="n-plan__values__cont">
+											<p>56</p><span>Часовой&nbsp;сервис</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-58"></a>
+										<div class="n-plan__values__cont">
+											<p>58</p><span>Билетная&nbsp;касса</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-66"></a>
+										<div class="n-plan__values__cont">
+											<p>66</p><span>Luxury</span>
+										</div>
+									</div>
+								</div>
+
+															</div><!-- .n-plan__values__ins -->
+
+							<div class="n-plan__values__header n-plan__values__header--color1" >
+								<span>Ювелирные украшения, аксессуары, часы</span>
+							</div>
+							<div class="n-plan__values__ins">
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-3"></a>
+										<div class="n-plan__values__cont">
+											<p>3</p><span>Московский ювелирный&nbsp;завод</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-18"></a>
+										<div class="n-plan__values__cont">
+											<p>18</p><span>585GOLD</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-25"></a>
+										<div class="n-plan__values__cont">
+											<p>25</p><span>Markiza</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-27"></a>
+										<div class="n-plan__values__cont">
+											<p>27</p><span>Кабинотье</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-34"></a>
+										<div class="n-plan__values__cont">
+											<p>34</p><span>Sunlight</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-39"></a>
+										<div class="n-plan__values__cont">
+											<p>39</p><span>Pandora</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-42"></a>
+										<div class="n-plan__values__cont">
+											<p>42</p><span>HAROLD</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-46"></a>
+										<div class="n-plan__values__cont">
+											<p>46</p><span>Адамас</span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="n-plan__values__check">
+									<div class="n-plan__values__box">
+										<a href=".t1-51"></a>
+										<div class="n-plan__values__cont">
+											<p>51</p><span>Анит</span>
+										</div>
+									</div>
+								</div>
+
+															</div>
+
+						</div>
+
+
+					</div>
+					<!-- /.n-plan__values__container -->
+
+				</div>
+				<!-- /.n-plan__values -->
+
+				<div class="n-plan__inside">
+
+					<div class="n-plan__plan__name n-plan__plan__name--name1">ул. Поморская</div>
+					<div class="n-plan__plan__name n-plan__plan__name--name2">пр. Советских Космонавтов</div>
+					<div class="n-plan__plan__name n-plan__plan__name--name3">ул. Воскресенская</div>
+					<div class="n-plan__plan__name n-plan__plan__name--name4">пр. Обводный Канал</div>
+					<div class="n-plan__plan__exit n-plan__plan__exit--exit5 hover tip" original-title="Лифт" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/-----------------------300x212.jpg"></div>
+					<div class="n-plan__plan__exit-title1" style="position: absolute; font-size: 12px; top: 233px; left: 83px;">Выход</div>
+					<div class="n-plan__plan__exit-title2" style="position: absolute; font-size: 12px; top: 233px; right: 75px;">Выход</div>
+					<div class="n-plan__plan__exit-title2" style="position: absolute; font-size: 12px; bottom: 106px; left: 370px; -ms-transform: rotate(270deg); -webkit-transform: rotate(270deg); transform: rotate(270deg);">Выход</div>
+					<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder1"></div>
+					<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder2"></div>
+					<div class="n-plan__plan__elevator"></div>
+					<div class="n-plan__plan__mainExit1"></div>
+					<div class="n-plan__plan__mainExit2"></div>
+					<div class="n-plan__plan__mainExit3"></div>
+
+					<div class="n-p__first">
+						<svg width="650px" height="490px" viewBox="0 0 650 490">
+							<style type="text/css">
+								.st98{fill-rule:evenodd;clip-rule:evenodd;fill:#fff;opacity: 0}
+								.st99{fill-rule:evenodd;clip-rule:evenodd;fill:#fff;}
+								.stNot {fill:#9C5897;}
+								.st1 {fill-rule:evenodd;clip-rule:evenodd;fill:#9C5897;/*display:none;*/}
+								.st2 {fill-rule:evenodd;clip-rule:evenodd;fill:#069cd8;}
+								.st3 {fill-rule:evenodd;clip-rule:evenodd;fill:#b22e82;}
+								.st4 {fill-rule:evenodd;clip-rule:evenodd;fill:#ed8e23;}
+								.st90 {fill:#fff !important;};
+
+							</style>
+							<g class="n-plan__plan__svg" style="">
+								<path class="st99" d="M209.1,38l-17-38L7.7,79.3c-9.2,4.1-7.8,9.8-7.4,12.1L85.1,318v89c0,35.3,28.7,64,64,64h201V38H209.1z"/>
+								<path class="st99" d="M613.1,38h-263v433h285c5.5,0,10-4.5,10-10V70L613.1,38z"/>
+							</g>
+							<path class="st1 t1-54 hover tip" original-title="София" data-phone="+7 (960) 001-58-88" data-thumb="http://titanarena.ru/wp-content/uploads/2016/02/----------.jpg" data-newstitle="" data-newslink="" d="M293.1,366h30v15h-30V366z"/>
+							<path class="st1 t1-53 hover tip" original-title="ЦВЕТНОЙ" data-phone="+7 (962) 662-87-79" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/----------------.jpg" data-newstitle="" data-newslink="" d="M416.1,366h30v15h-30V366z"/>
+							<path class="st1 t1-52 hover tip" original-title="Водорослевый комбинат" data-phone="8 921 479 93 88" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/-----------------------------------------.jpg" data-newstitle="" data-newslink="" d="M533.1,343l12,12l-21,21l-12-12L533.1,343z"/>
+							<path class="st1 t1-51 hover tip" original-title="Анит" data-phone="+7–909–552–55–27" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/Anit-Crystals.jpg" data-newstitle="" data-newslink="" d="M583.1,293l12,12l-21,21l-12-12L583.1,293z"/>
+														<path class="st1 t1-50 hover tip" original-title="Vermont" data-phone="42–52–19" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/Vermont.jpg" data-newstitle="" data-newslink="" d="M527.1,205h30v15h-30V205z"/>
+							<path class="st1 t1-49 hover tip" original-title="АВТОГАДЖЕТ" data-phone="+7 (8182) 49-19-01" data-thumb="" data-newstitle="" data-newslink="" d="M340.1,205h19v15h-19V205z"/>
+							<path class="st1 t1-60 hover tip" original-title="HELLO KITTY" data-phone="+7 (905) 873-01-00" data-thumb="" data-newstitle="" data-newslink="" d="M410.1,205h19v15h-19V205z"/>
+
+							<path class="st1 t1-61 hover tip" original-title="Сигареты, табак" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/02/826.jpg" data-newstitle="" data-newslink="" d="M495.1,205h19v15h-19V205z"/>
+							<path class="st1 t1-48 hover tip" original-title="iSHOP" data-phone="+7–981–550–70–38" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/logo_iShop---------------------.jpg" data-newstitle="Скидки в ISHOP" data-newslink="http://titanarena.ru/block6/skidki-v-ishop/" d="M297.1,205h30v15h-30V205z"/>
+							<path class="st1 t1-47 hover tip" original-title="Coffee like" data-phone="+7 (8182) 63–50–10" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/--------------------e1488276515371.jpg" data-newstitle="" data-newslink="" d="M191.1,205h19v15h-19V205z"/>
+							<path class="st1 t1-46 hover tip" original-title="Адамас" data-phone="+7 (8182) 42-27-25" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/------------.jpg" data-newstitle="Готовитесь к свадьбе? О кольцах не волнуйтесь!" data-newslink="http://titanarena.ru/block6/vtoroe-kolco-v-podarok/" d="M244.1,276h-76v9c0,0,0.4,3.3,4,7c9.7,9.9,38.9,37.6,55,53c11,10.5,17,9,17,9V276z"/>
+							<path class="st1 t1-45 hover tip" original-title="Modemia" data-phone="8 960 012 71 13" data-thumb="http://titanarena.ru/wp-content/uploads/2017/06/modemia-logo.png" data-newstitle="" data-newslink="" d="M245.1,314h40v40h-40V314z"/>
+							<path class="st1 t1-44 hover tip" original-title="Ile de beaute" data-phone="+7 (8182) 42-24-28" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/--------.jpg" data-newstitle="SALE В ИЛЬ ДЕ БОТЭ!" data-newslink="http://titanarena.ru/block6/sale-v-il-de-bote/" d="M327.1,313h41v-37h-123v37h41v41h41V313z"/>
+							<path class="st1 t1-43 hover tip" original-title="Мартиника" data-phone="+7 (8182) 44-74-49" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/------------------1.jpg" data-newstitle="" data-newslink="" d="M328.1,314h40v21h-40V314z"/>
+							<path class="st1 t1-42 hover tip" original-title="HAROLD" data-phone="+7–921–475–70–23" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/771de9e1eba19d829e7e359798fb66fe---------------------.png" data-newstitle="" data-newslink="" d="M328.1,336h40v18h-40V336z"/>
+							<path class="st1 t1-41 hover tip" original-title="C-Store" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/02/70e90ddc4f5395bed7195dfa7920e635---------------------.png" data-newstitle="" data-newslink="" d="M411.1,275h39v38h-39V275z"/>
+							<path class="st1 t1-40 hover tip" original-title="СЧАСТЛИВЫЙ ВЗГЛЯД" data-phone="+7 (8182) 42-10-93" data-thumb="http://titanarena.ru/wp-content/uploads/2016/02/-----------------------------------.png" data-newstitle="Подарки при покупке Ray-Ban!" data-newslink="http://titanarena.ru/block6/podarki-pri-pokupke-ray-ban/" d="M411.1,314h39v21h-39V314z"/>
+							<path class="st1 t1-39 hover tip" original-title="Pandora" data-phone="+7 (800) 700-83-38  доб. 667" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/512------512.jpg" data-newstitle="Новая коллекция «Геометрия»" data-newslink="http://titanarena.ru/block6/novaya-kollekciya-geometriya/" d="M411.1,336h39v18h-39V336z"/>
+							<path class="st1 t1-38 hover tip" original-title="Vitacci" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/02/vitacci_logo.png" data-newstitle="Серьезный SALE в Vitacci" data-newslink="http://titanarena.ru/block6/sereznyj-sale-v-vitacci/" d="M451.1,308h41v46h-41V308z"/>
+							<path class="st1 t1-37 hover tip" original-title="Leo Ventoni" data-phone="+7 (960) 003-04-94" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/LeoVenton--.jpg" data-newstitle="Новая коллекция сумок осень - зима!" data-newslink="http://titanarena.ru/block6/novaia-kollekcia-sumok-osen-zima/" d="M547.1,314l-41,40h-13v-40H547.1z"/>
+							<path class="st1 t1-36 hover tip" original-title="МЕДВЕДЬ" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/--------------.jpg" data-newstitle="" data-newslink="" d="M573.1,275h-80v38h55l25-24V275z"/>
+							<path class="st1 t1-35 hover tip" original-title="Soho" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/soho.jpg" data-newstitle="Финальная распродажа в SOHO" data-newslink="http://titanarena.ru/block6/finalnaya-rasprodazha-v-soho/" d="M533.1,235h40v39h-40V235z"/>
+							<path class="st1 t1-34 hover tip" original-title="Sunlight" data-phone="8–800–775–22–22 " data-thumb="http://titanarena.ru/wp-content/uploads/2016/08/742eae19b45aa785b5bf21b83e493594---------------------.gif" data-newstitle="" data-newslink="" d="M493.1,239v35h39v-39h-32l-4,4H493.1z"/>
+							<path class="st1 t1-33 hover tip" original-title="REDMOND" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/5b40b05e3cb9f31e3e4de816a5b0b36c---------------------.png" data-newstitle="" data-newslink="" d="M470.1,239h22v68h-22V239z"/>
+							<path class="st1 t1-32 hover tip" original-title="Zinger" data-phone="+7 (906) 284-69-01" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/266fc9ac165817d3c65d347b54715526---------------------.png" data-newstitle="В честь наступления весны Zinger дарит подарки!" data-newslink="http://titanarena.ru/block6/v-chest-nastupleniya-vesny-zinger-darit-podarki/" d="M451.1,239h18v68h-18V239z"/>
+							<path class="st1 t1-31 hover tip" original-title="Связной" data-phone="8–800–700–50–00, 8–800–700–43–43" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/----------------1-e1488275947361.jpg" data-newstitle="" data-newslink="" d="M411.1,239h39v35h-39V239z"/>
+							<path class="st1 t1-30 hover tip" original-title="Бюстье" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/Logo.jpg" data-newstitle="В рекламной кампании «Бюстье» SS 2017 снялась Даша Малыгина. " data-newslink="http://titanarena.ru/block6/v-reklamnoj-kampanii-byuste-ss-2017-snyalas-dasha-malygina/" d="M328.1,239h40v36h-40V239z"/>
+							<path class="st1 t1-29 hover tip" original-title="МТС" data-phone="8–800–250–08–90" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/--------------------------------------------1.png" data-newstitle="" data-newslink="" d="M308.1,239h19v36h-19V239z"/>
+							<path class="st1 t1-28 hover tip" original-title="Клинок" data-phone="+7 (911) 551-55-88" data-thumb="" data-newstitle="Внимание! Скидки в отделе КЛИНОК!" data-newslink="http://titanarena.ru/block6/vnimanie-skidki-v-otdele-klinok/" d="M288.1,239h19v36h-19V239z"/>
+							<path class="st1 t1-27 hover tip" original-title="Кабинотье" data-phone="+7 (911) 586-17-11" data-thumb="http://titanarena.ru/wp-content/uploads/2015/05/------------------1.png" data-newstitle="" data-newslink="" d="M266.1,239v36h21v-36H266.1z"/>
+							<path class="st1 t1-26 hover tip" original-title="NafNaf" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/naf_naf-e1501162688429.jpg" data-newstitle="" data-newslink="" d="M230.1,255h-10v20h45v-36h-25v-4h-10V255z"/>
+							<path class="st1 t1-25 hover tip" original-title="Markiza" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M210.1,255h9v20h-28v-40h19V255z"/>
+							<path class="st1 t1-24 hover tip" original-title="Organic Market" data-phone="65 31 75" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/OM.jpg" data-newstitle="" data-newslink="" d="M168.1,275v-40h22v40H168.1z"/>
+							<path class="st1 t1-23 hover tip" original-title="H&M" data-phone="+7 (8182) 42–07–25" data-thumb="http://titanarena.ru/wp-content/uploads/2017/02/HM-Share-Image---------------------.jpg" data-newstitle="" data-newslink="" d="M189.1,424v47h-40c-35.3,0-64-28.7-64-64V234h42v61c0,0-1.9,12.1,6,20c17.5,17.6,53.4,51,70,67
+												c11.4,11,18,14,18,14h18v28H189.1z"/>
+							<path class="st1 t1-22 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M286.1,458h-38v-62h38V458z"/>
+							<path class="st1 t1-21 hover tip" original-title="Westfalika" data-phone="+7 (902) 286-03-15" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/logo-WESTFALIKA.jpg" data-newstitle="Продление Акции 1+1=-50!" data-newslink="http://titanarena.ru/block6/prodlenie-akcii/" d="M287.1,458h6v8h8v5h28v-75h-42V458z"/>
+							<path class="st1 t1-20 hover tip" original-title="Мегафон" data-phone="+7 (800) 550-05-00" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/newlogo-fb---------------------.png" data-newstitle="Смотрим фильмы на планшете! " data-newslink="http://titanarena.ru/block6/smotrim-filmy-na-planshete/" d="M368.1,422h-20v10h-18v-36h38V422z"/>
+							<path class="st1 t1-19 hover tip" original-title="ЭТИКЕТ" data-phone="+7 (962) 662-08-81" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/------------.jpg" data-newstitle="" data-newslink="" d="M349.1,433v-10h19v48h-38v-38H349.1z"/>
+							<path class="st1 t1-18 hover tip" original-title="585GOLD" data-phone="+7 (8182) 46-25-65" data-thumb="http://titanarena.ru/wp-content/uploads/2016/01/585-logo.jpg" data-newstitle="Ликвидация в 585 GOLD!" data-newslink="http://titanarena.ru/block6/likvidciya-585-gold/" d="M430.1,396h-21v75h41v-37h-20V396z"/>
+							<path class="st1 t1-17 hover tip" original-title="Beeline" data-phone="+7 (8182) 42-10-09" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/--------------------------------------------.jpg" data-newstitle="" data-newslink="" d="M431.1,396h19v37h-19V396z"/>
+							<path class="st1 t1-16 hover tip" original-title="PODIO" data-phone="+7 (8182) 65-23-93" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/-----------e1489566471736.png" data-newstitle="В магазине PODIO уже во всю идет летняя распродажа!" data-newslink="http://titanarena.ru/block6/v-magazine-podio-uzhe-vo-vsyu-idet-letnyaya-rasprodazha/" d="M476.1,471v-3h11v-9h5v-63h-41v75H476.1z"/>
+							<path class="st1 t1-15 hover tip" original-title="Amati" data-phone="+7 (921) 088-42-02" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/----------.jpg" data-newstitle="" data-newslink="" d="M590.1,367v51h-57v-5h-29v-17h16c0,0,3.1,0.5,6-2c10.2-8.9,27-27,27-27H590.1z"/>
+							<path class="st1 t1-14 hover tip" original-title="Эконика" data-phone="8–800–200–55–50" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/--------------1.jpg" data-newstitle="Лимитированная коллекция «Evelina Khromtchenko & Ekonika»" data-newslink="http://titanarena.ru/block6/limitirovannaya-kollekciya-evelina-khromtchenko-ekonika/" d="M645.1,316v50h-91l51-50H645.1z"/>
+							<path class="st1 t1-13 hover tip" original-title="Klever" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/08/sumki_klever---------------------.jpg" data-newstitle="" data-newslink="" d="M645.1,276h-29v10c0,0-1.9,13.6-3,18c-2,8-7,11-7,11h39V276z"/>
+							<path class="st1 t1-12 hover tip" original-title="Цирюльник" data-phone="+7 (950) 250-29-15" data-thumb="" data-newstitle="" data-newslink="" d="M645.1,235c-0.4,0-29,0-29,0v40h29C645.1,275,645.4,235,645.1,235z"/>
+							<path class="stNot" d="M638.1,126v-19h-31v79h38v-60H638.1z"/>
+							<path class="st1 t1-11 hover tip" original-title="Сервисная зона" data-phone="" data-thumb="" d="M628.1,130v-23h-21v23z"/>
+							<path class="st1 t1-55 hover tip" original-title="Химчистка" data-phone="" data-thumb="" d="M645.1,144v-18h-17v18z"/>
+							<path class="st1 t1-56 hover tip" original-title="Ремонт часов" data-phone="" data-thumb="" d="M625.1,158v-18h-17v18z"/>
+							<path class="st1 t1-57 hover tip" original-title="Почтовое отделение" data-phone="" data-thumb="" d="M645.1,172v-18h-17v18z"/>
+							<path class="st1 t1-58 hover tip" original-title="Билетная касса" data-phone="" data-thumb="" d="M625.1,186v-18h-17v18z"/>
+							<path class="st1 t1-59 hover tip" original-title="Ключи" data-phone="" data-thumb="" d="M645.1,186v-18h-17v18z"/>
+							<path class="st1 t1-10 hover tip" original-title="Kari" data-phone="+7 (962) 664-96-54" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/--------.png" data-newstitle="Акция в Kari!" data-newslink="http://titanarena.ru/block6/akciya-v-kari-2/" d="M606.1,186h-54v-19h-22v-60h76V186z"/>
+							<path class="st1 t1-9 hover tip" original-title="Четыре лапы" data-phone="+7 (8182) 47-66-27; +7 (953) 930-24-27" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/4---------.jpg" data-newstitle="" data-newslink="" d="M493.1,149h26v37h-26V149z"/>
+							<path class="st1 t1-8 hover tip" original-title="Spar" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M308.1,186v-38h-99V76h44V38h240v18h26v92h-27v38H308.1z"/>
+							<path class="st1 t1-6 hover tip" original-title="Аптека МК" data-phone="+7 (8182) 65-22-25" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/-----------------1.jpg" data-newstitle="Грандиозная распродажа в АПТЕКЕ МК!" data-newslink="http://titanarena.ru/block6/grandioznaya-rasprodazha-v-apteke-mk/" d="M286.1,186v-22h-21v-15h42v37H286.1z"/>
+							<path class="st1 t1-7 hover tip" original-title="Coffeeman" data-phone="+7 (8182) 49-04-47" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/19b8d4b534065e623ad6e23175081138---------------------.png" data-newstitle="" data-newslink="" d="M265.1,165h20v21h-20V165z"/>
+							<path class="st1 t1-5 hover tip" original-title="Гранд При" data-phone="+7 (8182) 42-24-14" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/grandpri_01_logo.png" data-newstitle="Цветы и букеты к 1 сентября в салонах «Гранд При»!" data-newslink="http://titanarena.ru/block6/cveti-i-bukety-k-1-sentyabrya/" d="M248.1,149h16v37h-16V149z"/>
+							<path class="st1 t1-4 hover tip" original-title="FASHION STYLE" data-phone="+7 (911) 588-22-52" data-thumb="" data-newstitle="" data-newslink="" d="M231.1,149h16v37h-16V149z"/>
+							<path class="st1 t1-3 hover tip" original-title="Московский ювелирный завод" data-phone="+7 (8182) 42-24-29" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/------------------------------------------------------.png" data-newstitle="Финальная распродажа в магазинах Московского ювелирного завода" data-newslink="http://titanarena.ru/block6/finalnaya-rasprodazha-v-magazinax-moskovskogo-yuvelirnogo-zavoda/" d="M209.1,149h21v37h-21V149z"/>
+							<path class="st1 t1-2 hover tip" original-title="REEBOK" data-phone="8–800–250–88–20, +7 (8182) 42–07–33" data-thumb="http://titanarena.ru/wp-content/uploads/2015/09/Reebok-logo-2014---------------------.png" data-newstitle="" data-newslink="" d="M128.1,186h71V69h-71V27l-73,31v49h73V186z"/>
+							<path class="st1 t1-1 hover tip" original-title="Rive Gauche" data-phone="+7 (8182) 42-21-41;  +7 (8182) 42-21-40" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/-------------.jpg" data-newstitle="" data-newslink="" d="M55.1,120v-12h72v78h-91l-16-43h50v-23H55.1z"/>
+							<text transform="matrix(1 0 0 1 86.0555 152.0001)" class="st90">1</text>
+							<text transform="matrix(1 0 0 1 159.0555 123.0001)" class="st90">2</text>
+							<text transform="matrix(1 0 0 1 362.0555 104.0001)" class="st90">8</text>
+							<text transform="matrix(1 0 0 1 217.0555 170.0001)" class="st90">3</text>
+							<text transform="matrix(1 0 0 1 235.0555 170.0001)" class="st90">4</text>
+							<text transform="matrix(1 0 0 1 252.0555 170.0001)" class="st90">5</text>
+							<text transform="matrix(1 0 0 1 293.0554 170.0001)" class="st90">6</text>
+							<text transform="matrix(1 0 0 1 272.0554 180.0001)" class="st90">7</text>
+							<text transform="matrix(1 0 0 1 502.5554 173.0001)" class="st90">9</text>
+							<text transform="matrix(1 0 0 1 562.0554 149)" class="st90">10</text>
+							<text transform="matrix(1 0 0 1 610.0554 125)" class="st90">11</text>
+							<text transform="matrix(1 0 0 1 630.0554 140)" class="st90">55</text>
+							<text transform="matrix(1 0 0 1 610.0554 153)" class="st90">56</text>
+							<text transform="matrix(1 0 0 1 630.0554 167)" class="st90">57</text>
+							<text transform="matrix(1 0 0 1 610.0554 182)" class="st90">58</text>
+							<text transform="matrix(1 0 0 1 630.0554 182)" class="st90">59</text>
+							<text transform="matrix(1 0 0 1 194.0555 217.5)" class="st90">47</text>
+							<text transform="matrix(1 0 0 1 303.5554 217.5)" class="st90">48</text>
+							<text transform="matrix(1 0 0 1 342.0555 217.5)" class="st90">49</text>
+							<text transform="matrix(1 0 0 1 413.0555 217.5)" class="st90">60</text>
+							<text transform="matrix(1 0 0 1 498.0555 217.5)" class="st90">61</text>
+							<text transform="matrix(1 0 0 1 533.0554 217.5)" class="st90">50</text>
+							<text transform="matrix(1 0 0 1 116.0555 375.9999)" class="st90">23</text>
+							<text transform="matrix(1 0 0 1 171.0555 262.0001)" class="st90">24</text>
+							<text transform="matrix(1 0 0 1 195.0555 269.0001)" class="st90">25</text>
+							<text transform="matrix(1 0 0 1 239.0554 262.0001)" class="st90">26</text>
+							<text transform="matrix(1 0 0 1 269.0554 262.0001)" class="st90">27</text>
+							<text transform="matrix(1 0 0 1 290.0554 262.0001)" class="st90">28</text>
+							<text transform="matrix(1 0 0 1 310.0554 262.0001)" class="st90">29</text>
+							<text transform="matrix(1 0 0 1 340.0555 262.0001)" class="st90">30</text>
+							<text transform="matrix(1 0 0 1 423.0555 262.0001)" class="st90">31</text>
+							<text transform="matrix(1 0 0 1 452.0554 281.0001)" class="st90">32</text>
+							<text transform="matrix(1 0 0 1 472.5554 281.0001)" class="st90">33</text>
+							<text transform="matrix(1 0 0 1 506.0553 262)" class="st90">34</text>
+							<text transform="matrix(1 0 0 1 545.0555 262)" class="st90">35</text>
+							<text transform="matrix(1 0 0 1 625.5554 262)" class="st90">12</text>
+							<text transform="matrix(1 0 0 1 209.0554 307)" class="st90">46</text>
+							<text transform="matrix(1 0 0 1 256.0554 337)" class="st90">45</text>
+							<text transform="matrix(1 0 0 1 297.5554 300.0001)" class="st90">44</text>
+							<text transform="matrix(1 0 0 1 340.0555 329.9998)" class="st90">43</text>
+							<text transform="matrix(1 0 0 1 340.0555 349)" class="st90">42</text>
+							<text transform="matrix(1 0 0 1 423.0555 300.0001)" class="st90">41</text>
+							<text transform="matrix(1 0 0 1 423.0555 329.9998)" class="st90">40</text>
+							<text transform="matrix(1 0 0 1 423.0555 350.5)" class="st90">39</text>
+							<text transform="matrix(1 0 0 1 462.0554 336)" class="st90">38</text>
+							<text transform="matrix(1 0 0 1 498.5554 336)" class="st90">37</text>
+							<text transform="matrix(1 0 0 1 520.0555 299.5)" class="st90">36</text>
+							<text transform="matrix(1 0 0 1 625.5554 299.9051)" class="st90">13</text>
+							<text transform="matrix(1 0 0 1 607.0554 345)" class="st90">14</text>
+							<text transform="matrix(1 0 0 1 573.0555 312.9998)" class="st90">51</text>
+							<text transform="matrix(1 0 0 1 522.0554 363.9999)" class="st90">52</text>
+							<text transform="matrix(1 0 0 1 422.0555 377.9999)" class="st90">53</text>
+							<text transform="matrix(1 0 0 1 298.5554 377.9999)" class="st90">54</text>
+							<text transform="matrix(1 0 0 1 260.0554 432)" class="st90">22</text>
+							<text transform="matrix(1 0 0 1 301.5554 432)" class="st90">21</text>
+							<text transform="matrix(1 0 0 1 341.0555 415.0001)" class="st90">20</text>
+							<text transform="matrix(1 0 0 1 340.0555 456)" class="st90">19</text>
+							<text transform="matrix(1 0 0 1 422.0555 455)" class="st90">18</text>
+							<text transform="matrix(1 0 0 1 433.0555 420.9999)" class="st90">17</text>
+							<text transform="matrix(1 0 0 1 462.0554 433.5)" class="st90">16</text>
+							<text transform="matrix(1 0 0 1 554.0554 395.9999)" class="st90">15</text>
+                            <!--28/06/2017 start-->
+                            <!-- 62 -->
+                            <path class="st1 t1-47 hover tip" original-title="Козули" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M191.1,205h49v15h-19V205z" data-hasqtip="8"></path>
+
+                            <text transform="matrix(1 0 0 1 224.0555 217.5)" class="st90">62</text>
+
+                            <!-- 63 -->
+                            <path class="st1 t1-49 hover tip" original-title="Сладости" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M340.1,205h31v15h-11V205z" data-hasqtip="4"></path>
+
+                            <text transform="matrix(0.8 0 0 0.8 360.0555 216.5)" class="st90">63</text>
+
+                            <!-- 64 -->
+                            <path class="st1 t1-49 hover tip" original-title="Специи" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M340.1,205h43v15h-11V205z" data-hasqtip="4"></path>
+
+                            <text transform="matrix(0.8 0 0 0.8 372.0555 216.5)" class="st90">64</text>
+
+                            <!-- 65 -->
+                            <path class="st1 t1-60 hover tip" original-title="HELLO KITTY" data-phone="+7 (905) 873-01-00" data-thumb="" data-newstitle="" data-newslink="" d="M410.1,205h50v15h-19V205z" data-hasqtip="5"></path>
+
+                            <text transform="matrix(1 0 0 1 444 217.5)" class="st90">65</text>
+
+                            <!-- 66 -->
+                            <path class="st1 t1-54 hover tip" original-title="Luxury" data-phone="+7 (921) 485–66–00" data-thumb="" data-newstitle="" data-newslink="" d="M293.1,366h68v15h-25V366z" data-hasqtip="1"></path>
+
+                            <text transform="matrix(1 0 0 1 342 377.9999)" class="st90">66</text>
+
+                            <!-- 67 -->
+                            <path class="st1 t1-53 hover tip" original-title="YOTA" data-phone="8 (800) 550–00–07" data-thumb="" data-newstitle="" data-newslink="" d="M397,373h1v16h-19V373z" data-hasqtip="2"></path>
+
+                            <text transform="matrix(1 0 0 1 382 386)" class="st90">67</text>
+
+                            <!-- 68 -->
+                            <path class="st1 t1-53 hover tip" original-title="Tele2" data-phone="+7 (8182) 47–47–47" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/----------------.jpg" data-newstitle="" data-newslink="" d="M397,350h1v16h-19V350z" data-hasqtip="2"></path>
+
+                            <text transform="matrix(1 0 0 1 382 363)" class="st90">68</text>
+                            <!--28/06/2017 end-->
+							<filter id="drop-shadow">
+								<feGaussianBlur in="SourceAlpha" stdDeviation="2.2"></feGaussianBlur>
+								<feOffset dx="3" dy="4" result="offsetblur"></feOffset>
+								<feFlood flood-color="rgba(0,0,0,0.3)"></feFlood>
+								<feComposite in2="offsetblur" operator="in"></feComposite>
+								<feMerge>
+									<feMergeNode></feMergeNode>
+									<feMergeNode in="SourceGraphic"></feMergeNode>
+								</feMerge>
+							</filter>
+						</svg>
+					</div>
+
+				</div>
+				<!-- /.n-plan__inside -->
+
+
+
+			</div>
+			<!-- /.n-plan__plan -->
+
+			<div class="n-plan__plan tabs-pane" id="tab2">
+
+
+				<div class="n-plan__values">
+
+					<div class="n-plan__values__container">
+
+						<div class="n-plan__values__value">
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Детские товары</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-7"></a>
+									<div class="n-plan__values__cont">
+										<p>7</p><span>O’stin&nbsp;Kids</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Джинсы</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-12"></a>
+									<div class="n-plan__values__cont">
+										<p>12</p><span>Colin&#39;s</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-20"></a>
+									<div class="n-plan__values__cont">
+										<p>20</p><span>Westland</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-37"></a>
+									<div class="n-plan__values__cont">
+										<p>37</p><span>Mavi</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-38"></a>
+									<div class="n-plan__values__cont">
+										<p>38</p><span>LTB</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Еда, кафе, fast food</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-36"></a>
+									<div class="n-plan__values__cont">
+										<p>36</p><span>Кофейня&nbsp;Iris</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-45"></a>
+									<div class="n-plan__values__cont">
+										<p>45</p><span>Вкусная&nbsp;помощь</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Кожгалантерея, сумки, аксессуары</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-31"></a>
+									<div class="n-plan__values__cont">
+										<p>31</p><span>Wenger</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-34"></a>
+									<div class="n-plan__values__cont">
+										<p>34</p><span>Vera&nbsp;Irisova</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-35"></a>
+									<div class="n-plan__values__cont">
+										<p>35</p><span>Guess</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-42"></a>
+									<div class="n-plan__values__cont">
+										<p>42</p><span>ШЛЯПО</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Мужская одежда</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-10"></a>
+									<div class="n-plan__values__cont">
+										<p>10</p><span>VAN&nbsp;CLIFF</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-15"></a>
+									<div class="n-plan__values__cont">
+										<p>15</p><span>Henderson</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-16"></a>
+									<div class="n-plan__values__cont">
+										<p>16</p><span>Henderson</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-22"></a>
+									<div class="n-plan__values__cont">
+										<p>22</p><span>Donatto</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-33"></a>
+									<div class="n-plan__values__cont">
+										<p>33</p><span>MODA&nbsp;MIX</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-39"></a>
+									<div class="n-plan__values__cont">
+										<p>39</p><span>Первый&nbsp;мужской</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Нижнее Белье</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-18"></a>
+									<div class="n-plan__values__cont">
+										<p>18</p><span>Butterfly</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-19"></a>
+									<div class="n-plan__values__cont">
+										<p>19</p><span>TRIUMPH</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-40"></a>
+									<div class="n-plan__values__cont">
+										<p>40</p><span>Анжелика</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Обувь</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-13"></a>
+									<div class="n-plan__values__cont">
+										<p>13</p><span>Chester</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Одежда</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-1"></a>
+									<div class="n-plan__values__cont">
+										<p>1</p><span>Bershka</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-2"></a>
+									<div class="n-plan__values__cont">
+										<p>2</p><span>befree</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-3"></a>
+									<div class="n-plan__values__cont">
+										<p>3</p><span>Zarina</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-4"></a>
+									<div class="n-plan__values__cont">
+										<p>4</p><span>Stradivarius</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-5"></a>
+									<div class="n-plan__values__cont">
+										<p>5</p><span>Pull &&nbsp;Bear</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-6"></a>
+									<div class="n-plan__values__cont">
+										<p>6</p><span>Love&nbsp;Republic</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-8"></a>
+									<div class="n-plan__values__cont">
+										<p>8</p><span>O&#39;stin</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-9"></a>
+									<div class="n-plan__values__cont">
+										<p>9</p><span>NAPAPIJRI</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-11"></a>
+									<div class="n-plan__values__cont">
+										<p>11</p><span>Pompa</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-14"></a>
+									<div class="n-plan__values__cont">
+										<p>14</p><span>Medicine</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-17"></a>
+									<div class="n-plan__values__cont">
+										<p>17</p><span>LADY &#038; GENTELMAN&nbsp;CITY</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-21"></a>
+									<div class="n-plan__values__cont">
+										<p>21</p><span>H&#038;M</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-23"></a>
+									<div class="n-plan__values__cont">
+										<p>23</p><span>SaraФan</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-25"></a>
+									<div class="n-plan__values__cont">
+										<p>25</p><span>Kira&nbsp;Plastinina</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-27"></a>
+									<div class="n-plan__values__cont">
+										<p>27</p><span>Шоколад</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-28"></a>
+									<div class="n-plan__values__cont">
+										<p>28</p><span>Protest&nbsp;Store</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-29"></a>
+									<div class="n-plan__values__cont">
+										<p>29</p><span>VipArt</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-30"></a>
+									<div class="n-plan__values__cont">
+										<p>30</p><span>Marella</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-32"></a>
+									<div class="n-plan__values__cont">
+										<p>32</p><span>Elis</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Праздничная атрибутика, подарки</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-26"></a>
+									<div class="n-plan__values__cont">
+										<p>26</p><span>Другие&nbsp;подарки</span>
+									</div>
+								</div>
+							</div>
+
+													</div><!-- .n-plan__values__ins -->
+
+						<div class="n-plan__values__header n-plan__values__header--color1" >
+							<span>Услуги</span>
+						</div>
+						<div class="n-plan__values__ins">
+
+
+							<div class="n-plan__values__check">
+								<div class="n-plan__values__box">
+									<a href=".t2-41"></a>
+									<div class="n-plan__values__cont">
+										<p>41</p><span>Brow&nbsp;Bar</span>
+									</div>
+								</div>
+							</div>
+
+													</div>
+
+					</div>
+
+
+				</div>
+				<!-- /.n-plan__values__container -->
+
+			</div>
+			<!-- /.n-plan__values -->
+
+			<div class="n-plan__inside">
+
+				<div class="n-plan__plan__name n-plan__plan__name--name1">ул. Поморская</div>
+				<div class="n-plan__plan__name n-plan__plan__name--name2">пр. Советских Космонавтов</div>
+				<div class="n-plan__plan__name n-plan__plan__name--name3">ул. Воскресенская</div>
+				<div class="n-plan__plan__name n-plan__plan__name--name4">пр. Обводный Канал</div>
+				<div class="n-plan__plan__exit n-plan__plan__exit--exit5 hover tip" original-title="Лифт" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/saltpeper.png"></div>
+				<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder1"></div>
+				<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder2"></div>
+				<div class="n-plan__plan__elevator"></div>
+
+				<div class="n-p__first">
+
+					<svg width="650px" height="490px" viewBox="0 0 650 490">
+						<style type="text/css">
+
+						</style>
+						<g class="n-plan__plan__svg">
+							<path class="st99" d="M611.9,38H344.6l0.9,433h289.2c5.7,0,10.4-4.5,10.4-10V70L611.9,38z"/>
+							<path class="st99" d="M209.1,38l-17-38L7.7,79.3c-9.2,4.1-7.8,9.8-7.4,12.1L85.1,318v89c0,35.3,28.7,64,64,64H356l-0.9-433H209.1z"/>
+							<path class="st2 t2-43 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M293.1,366h30v15h-30V366z"/>
+							<path class="st2 t2-42 hover tip" original-title="ШЛЯПО" data-phone="+7 (921) 720-04-54" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/---------------------.jpg" data-newstitle="Большой выбор рюкзаков в отделах ШляПо!" data-newslink="http://titanarena.ru/block6/rukzaki-v-shlyapo/" d="M461.1,366h30v15h-30V366z"/>
+							<path class="st2 t2-41 hover tip" original-title="Brow Bar" data-phone="+7–921–293–66–22" data-thumb="http://titanarena.ru/wp-content/uploads/2017/06/browbar.jpg" data-newstitle="Федеральная сеть "Brow bar" в АРХАНГЕЛЬСКЕ! " data-newslink="http://titanarena.ru/block6/federalnaia-set-brow-bar/" d="M585.1,244h17v23h-17V244z"/>
+							<path class="st2 t2-40 hover tip" original-title="Анжелика" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/08/82d724e250d6eb8e931c58badbe7f1ea---------------------.png" data-newstitle="" data-newslink="" d="M191.5,311c-8.2-7.9-15.5-15-19.4-19c-3.6-3.7-4-7-4-7v-11h38v37H191.5z M244.1,354c0,0-0.7,0.2-2,0H244.1z"/>
+							<path class="st2 t2-39 hover tip" original-title="Первый мужской" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/08/------------------------------------------------.jpg" data-newstitle="" data-newslink="" d="M244.1,354c0,0-7.6,0.5-17-9c-9-9.1-22.8-21.7-34.5-33h55.5v42H244.1z"/>
+							<path class="st2 t2-38 hover tip" original-title="LTB" data-phone="+7 (921) 070-10-90" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/3---------------------.jpg" data-newstitle="" data-newslink="" d="M249.1,284h39v70h-39V284z"/>
+							<path class="st2 t2-37 hover tip" original-title="Mavi" data-phone="+7 (920) 070-04-32" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/mavi.jpg" data-newstitle="" data-newslink="" d="M289.1,284h39v70h-39V284z"/>
+							<path class="st2 t2-36 hover tip" original-title="Кофейня Iris" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/-----------------------------.png" data-newstitle="" data-newslink="" d="M329.1,274h27v80h-27V274z"/>
+							<path class="st2 t2-35 hover tip" original-title="Guess" data-phone="+7 921-720-04-55" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/logo-guess.jpg" data-newstitle="" data-newslink="" d="M423.1,312h36v42h-36V312z"/>
+							<path class="st2 t2-34 hover tip" original-title="Vera Irisova" data-phone="+7 (960) 012-03-30" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/-----------------------.jpg" data-newstitle="Новая коллекция в отделе Вера Ирисова" data-newslink="http://titanarena.ru/block6/novaya-kollekciya-v-otdele-vera-irisova/" d="M423.1,285h36v26h-36V285z"/>
+							<path class="st2 t2-33 hover tip" original-title="MODA MIX" data-phone="+7–911–581–42–37" data-thumb="http://titanarena.ru/wp-content/uploads/2016/03/cPx9kUZQyQ---------------------.jpg" data-newstitle="" data-newslink="" d="M460.1,285h31v69h-31V285z"/>
+							<path class="st2 t2-32 hover tip" original-title="Elis" data-phone="+7–911–682–10–20" data-thumb="" data-newstitle="Летняя распродажа в ELIS" data-newslink="http://titanarena.ru/block6/letnyaya-rasprodazha-elis/" d="M532.1,285v44l-26,25h-14v-69H532.1z"/>
+							<path class="st2 t2-31 hover tip" original-title="Wenger" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/08/31---------------------.png" data-newstitle="Качество по приятным ценам!" data-newslink="http://titanarena.ru/block6/kachestvo-po-priyatnim-cenam/" d="M533.1,285h40v4l-40,39V285z"/>
+							<path class="st2 t2-30 hover tip" original-title="Marella" data-phone="+7–963–200–46–55" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/marella-logo.jpeg" data-newstitle="Летняя распродажа в MARELLA начинается!" data-newslink="http://titanarena.ru/block6/letnyaya-rasprodazha-v-marella-nachinaetsya/" d="M533.1,235h40v49h-40V235z"/>
+							<path class="st2 t2-29 hover tip" original-title="VipArt" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/08/vipart---------------------.gif" data-newstitle="" data-newslink="" d="M492.1,239h5l4-4h31v49h-40V239z"/>
+							<path class="st2 t2-28 hover tip" original-title="Protest Store" data-phone="+7–960–017–10–24" data-thumb="" data-newstitle="" data-newslink="" d="M468.1,239h23v45h-23V239z"/>
+							<path class="st2 t2-27 hover tip" original-title="Шоколад" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M423.1,239h44v45h-44V239z"/>
+							<path class="st2 t2-26 hover tip" original-title="Другие подарки" data-phone="+7 (911) 554-50-80" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/th------------_243.jpg.293x150_q95_box-00293150_crop_detail.jpg" data-newstitle="" data-newslink="" d="M329.1,239h27v34h-27V239z"/>
+							<path class="st2 t2-25 hover tip" original-title="Kira Plastinina" data-phone="65-05-70" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/kira-plastinina.gif" data-newstitle="" data-newslink="" d="M289.1,239h39v44h-39V239z"/>
+							<path class="st2 t2-24 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M249.1,239h39v44h-39V239z"/>
+							<path class="st2 t2-23 hover tip" original-title="SaraФan" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/08/7-MWndV16bU---------------------.jpg" data-newstitle="" data-newslink="" d="M207.1,235v76h41v-72h-5l-3-4H207.1z"/>
+							<path class="st2 t2-22 hover tip" original-title="Donatto" data-phone="44-03-81" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/donatto.png" data-newstitle="В "Donatto" грандиозная распродажа верхней одежды" data-newslink="http://titanarena.ru/block6/v-donatto-rasprodaja-verhnei-odejdi/" d="M168.1,235h38v38h-38V235z"/>
+							<path class="st2 t2-21 hover tip" original-title="H&M" data-phone="+7 (8182) 42–07–25" data-thumb="http://titanarena.ru/wp-content/uploads/2017/02/HM-Share-Image---------------------.jpg" data-newstitle="" data-newslink="" d="M208.1,424v47h-59c-35.3,0-64-28.7-64-64V234h42v61c0,0-1.9,12.1,6,20c17.5,17.6,53.4,51,70,67
+												c11.4,11,18,14,18,14h18v28H208.1z"/>
+							<path class="st2 t2-20 hover tip" original-title="Westland" data-phone="+7 (911) 558-12-59" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/3aZ04jTzbbI---------------------.jpg" data-newstitle="Финальная Распродажа началась!" data-newslink="http://titanarena.ru/block6/final-sale-start/" d="M247.1,396h40v38h-40V396z"/>
+							<path class="st2 t2-19 hover tip" original-title="TRIUMPH" data-phone="+7-952-251-73-74" data-thumb="http://titanarena.ru/wp-content/uploads/2014/11/25459d77272e78dc874720c960352c19---------------------.png" data-newstitle="" data-newslink="" d="M288.1,396h20v38h-20V396z"/>
+							<path class="st2 t2-18 hover tip" original-title="Butterfly" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/03/---------------------------.png" data-newstitle="Новая коллекция нижнего белья LISCA осень-зима 2016" data-newslink="http://titanarena.ru/block6/novaya-kollekciya-nizhnego-belya-lisca-osen-zima-2016/" d="M309.1,396h20v38h-20V396z"/>
+							<path class="st2 t2-17 hover tip" original-title="LADY & GENTELMAN CITY" data-phone="49-41-46" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/unnamed-file.jpg" data-newstitle="Осенняя распродажа в Lady&Gentelman" data-newslink="http://titanarena.ru/block6/osennyaya-rasprodazha-v-ladygentelman/" d="M275.1,471v-16h13v-20h42v-39h38v75H275.1z"/>
+							<path class="st2 t2-16 hover tip" original-title="Henderson" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/henderson.jpg" data-newstitle="" data-newslink="" d="M369.1,396h40v75h-40V396z"/>
+							<path class="st2 t2-15 hover tip" original-title="Henderson" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/henderson.jpg" data-newstitle="" data-newslink="" d="M410.1,396h39v75h-39V396z"/>
+							<path class="st2 t2-14 hover tip" original-title="Medicine" data-phone="+7–931–400–06–34" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/7b475e49b8d45b5e79d13e44fc5ae1e1---------------------.png" data-newstitle="" data-newslink="" d="M491.1,455v-59h-41v75h54v-16H491.1z"/>
+							<path class="st2 t2-13 hover tip" original-title="Chester" data-phone="42-14-77" data-thumb="http://titanarena.ru/wp-content/uploads/2016/03/CHESTER_gerb_WHITE.jpg" data-newstitle="Подарок к отпуску: скидки в CHESTER до 70%" data-newslink="http://titanarena.ru/block6/podarok-k-otpusku-skidki-v-chester-do-70/" d="M571.1,435h-39v-22h-28v-17h16c0,0,3.1,0.5,6-2c10.2-8.9,45-45,45-45V435z"/>
+							<path class="st2 t2-12 hover tip" original-title="Colin's" data-phone="8–800–555–53–26, +7 (8182) 49–41–47" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/192x192px_colins.jpg" data-newstitle="Встречай осень с COLIN`S JEANS FEST!" data-newslink="http://titanarena.ru/block6/vstrechaj-osen-s-colins-jeans-fest/" d="M645.1,316h-40l-33,32v87h44v-22h24v22h5V316z"/>
+							<path class="st2 t2-11 hover tip" original-title="Pompa" data-phone="65-12-56" data-thumb="http://titanarena.ru/wp-content/uploads/2016/02/pompa1.jpg" data-newstitle="" data-newslink="" d="M645.1,276h-29v10c0,0-1.9,13.6-3,18c-2,8-7,11-7,11h39V276z"/>
+							<path class="st2 t2-10 hover tip" original-title="VAN CLIFF" data-phone="+7–911–686–65–83" data-thumb="http://titanarena.ru/wp-content/uploads/2015/09/21-van-cliff-logotip-e1488284118252.jpg" data-newstitle="Новая коллекция в отделе Van Cliff" data-newslink="http://titanarena.ru/block6/novaia-collekcia-van-cliff/" d="M616.1,235h29v40h-29V235z"/>
+							<path class="st2 t2-9 hover tip" original-title="NAPAPIJRI" data-phone="+7 (8182) 42–07–39" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/cfc723f130d6f8da92ede96db754830b-e1488284003476.png" data-newstitle="" data-newslink="" d="M616.1,190h29v44h-29V190z"/>
+							<path class="st2 t2-8 hover tip" original-title="O'stin" data-phone="8-800-777-49-99" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/OSTIN_LogoBlack_New1.jpg" data-newstitle="" data-newslink="" d="M606.1,190v-12h39v-52h-7v-19h-32V89h-33V76h-31V60h-9v130H606.1z"/>
+							<path class="st2 t2-7 hover tip" original-title="O’stin Kids" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/Ostin-Kids.jpg" data-newstitle="" data-newslink="" d="M492.1,114v72h6l4,4h30v-76H492.1z"/>
+							<path class="st2 t2-6 hover tip" original-title="Love Republic" data-phone="8–800–250–32–33, +7 (8182) 42–24–30" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/LOVE-REPUBLIC-e1488283878398.png" data-newstitle="-40% на ВСЕ в LOVE REPUBLIC! " data-newslink="http://titanarena.ru/block6/40-na-vse-v-love-republic/" d="M451.1,114h40v72h-40V114z"/>
+							<path class="st2 t2-5 hover tip" original-title="Pull & Bear" data-phone="42-03-10" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/logo1.png" data-newstitle="" data-newslink="" d="M418.1,190l4-4h28v-73h82V60h-179v130H418.1z"/>
+							<path class="st2 t2-4 hover tip" original-title="Stradivarius" data-phone="+7 (8182) 42–01–14" data-thumb="http://titanarena.ru/wp-content/uploads/2017/02/------------------------1---------------------.png" data-newstitle="" data-newslink="" d="M288.1,186h29l3,4h32V60l-105,0v16v0v9h41V186z"/>
+							<path class="st2 t2-3 hover tip" original-title="Zarina" data-phone="42-24-31" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/logo_zarina_white1.png" data-newstitle="" data-newslink="" d="M254.1,86h33v100h-33V86z"/>
+							<path class="st2 t2-2 hover tip" original-title="befree" data-phone="8–800–250–01–02" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/befree.jpg" data-newstitle="" data-newslink="" d="M245.1,190l4-4h4V86h-33v104H245.1z"/>
+							<path class="st2 t2-1 hover tip" original-title="Bershka" data-phone="42-03-14" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/logo-bershka-11.jpg" data-newstitle="" data-newslink="" d="M209.1,49h-29v27h30v114h-83v38h-51v-52h-44l-16-43h54v-13h-15V69l136-58L209.1,49z"/>
+							<text x="468" y="379"class="st90">42</text>
+							<text x="300" y="379"class="st90">43</text>
+							<text x="462" y="434"class="st90">14</text>
+							<text transform="matrix(1 0 0 1 130.0555 125)" class="st90">1</text>
+							<text transform="matrix(1 0 0 1 234.5555 142.8103)" class="st90">2</text>
+							<text transform="matrix(1 0 0 1 267.0554 143)" class="st90">3</text>
+							<text transform="matrix(1 0 0 1 313.0555 142.9999)" class="st90">4</text>
+							<text transform="matrix(1 0 0 1 399.0555 142.8102)" class="st90">5</text>
+							<text transform="matrix(1 0 0 1 468.0555 153.9999)" class="st90">6</text>
+							<text transform="matrix(1 0 0 1 512.0553 153.9998)" class="st90">7</text>
+							<text transform="matrix(1 0 0 1 585.0553 153.9998)" class="st90">8</text>
+							<text transform="matrix(1 0 0 1 138.0555 395.9999)" class="st90">21</text>
+							<text transform="matrix(1 0 0 1 177.994 260.9998)" class="st90">22</text>
+							<text transform="matrix(1 0 0 1 182.0554 294.4998)" class="st90">40</text>
+							<text transform="matrix(1 0 0 1 220.0555 275.9998)" class="st90">23</text>
+							<text transform="matrix(1 0 0 1 220.0554 333.0026)" class="st90">39</text>
+							<text transform="matrix(1 0 0 1 260.0555 266.9997)" class="st90">24</text>
+							<text transform="matrix(1 0 0 1 260.0555 328.0002)" class="st90">38</text>
+							<text transform="matrix(1 0 0 1 299.0554 266.9999)" class="st90">25</text>
+							<text transform="matrix(1 0 0 1 299.5554 328)" class="st90">37</text>
+							<text transform="matrix(1 0 0 1 334.0555 261.5)" class="st90">26</text>
+							<text transform="matrix(1 0 0 1 334.0553 311.9998)" class="st90">36</text>
+							<text transform="matrix(1 0 0 1 437.0553 267.0001)" class="st90">27</text>
+							<text transform="matrix(1 0 0 1 472.0552 267)" class="st90">28</text>
+							<text transform="matrix(1 0 0 1 505.0554 267)" class="st90">29</text>
+							<text transform="matrix(1 0 0 1 544.0555 267)" class="st90">30</text>
+							<text transform="matrix(1 0 0 1 437.0552 305.0005)" class="st90">34</text>
+							<text transform="matrix(1 0 0 1 437.055 339.8103)" class="st90">35</text>
+							<text transform="matrix(1 0 0 1 468.0556 328.0001)" class="st90">33</text>
+							<text transform="matrix(1 0 0 1 504.0552 319)" class="st90">32</text>
+							<text transform="matrix(1 0 0 1 540.5554 300.9997)" class="st90">31</text>
+							<text transform="matrix(1 0 0 1 586.0552 261.4998)" class="st90">41</text>
+							<text transform="matrix(1 0 0 1 624.5553 217.8102)" class="st90">9</text>
+							<text transform="matrix(1 0 0 1 624.5552 259.4998)" class="st90">10</text>
+							<text transform="matrix(1 0 0 1 624.5551 300.9997)" class="st90">11</text>
+							<text transform="matrix(1 0 0 1 606.0554 381.0001)" class="st90">12</text>
+							<text transform="matrix(1 0 0 1 544.0555 409.8102)" class="st90">13</text>
+							<text transform="matrix(1 0 0 1 260.0555 419.8103)" class="st90">20</text>
+							<text transform="matrix(1 0 0 1 290.0555 419.8105)" class="st90">19</text>
+							<text transform="matrix(1 0 0 1 311.0554 419.8103)" class="st90">18</text>
+							<text transform="matrix(1 0 0 1 334.0554 443.8102)" class="st90">17</text>
+							<text transform="matrix(1 0 0 1 380.5554 434.9996)" class="st90">16</text>
+							<text transform="matrix(1 0 0 1 421.0555 433.9998)" class="st90">15</text>
+
+							<!--28/06/2017 start-->
+							<!-- new-->
+
+							<!-- 44 -->
+							<path class="st2 t2-44 hover tip" original-title="Glamorous" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M534,412H504V396h21l6-7v24Z" data-hasqtip="105"></path>
+							<text transform="matrix(1 0 0 1 510 410)" class="st90">44</text>
+
+							<!-- 45 -->
+							<rect class="st2 t2-45 hover tip" original-title="Вкусная помощь" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="234" y="205" width="22" height="17" data-hasqtip="106"></rect>
+							<text transform="matrix(1 0 0 1 236 219)" class="st90">45</text>
+
+							<!-- 46 верхний-->
+							<rect class="st2 t2-46 hover tip" original-title="Матрешка кудесница" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="368" y="205" width="12" height="12" data-hasqtip="107"></rect>
+							<text transform="matrix(.75 0 0 .75 368 215)" class="st90">46</text>
+
+							<!-- 46 нижний-->
+							<rect class="st2 t2-46 hover tip" original-title="Матрешка кудесница" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="368" y="219" width="12" height="12" data-hasqtip="108"></rect>
+							<text transform="matrix(.75 0 0 .75 368 229)" class="st90">46</text>
+
+						<text transform="matrix(1 0 0 1 544 409)" class="st90">13</text>
+                        <!--28/06/2017 end-->
+						</g>
+
+						<filter id="drop-shadow">
+							<feGaussianBlur in="SourceAlpha" stdDeviation="2.2"></feGaussianBlur>
+							<feOffset dx="3" dy="4" result="offsetblur"></feOffset>
+							<feFlood flood-color="rgba(0,0,0,0.3)"></feFlood>
+							<feComposite in2="offsetblur" operator="in"></feComposite>
+							<feMerge>
+								<feMergeNode></feMergeNode>
+								<feMergeNode in="SourceGraphic"></feMergeNode>
+							</feMerge>
+						</filter>
+					</svg>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- /.n-plan__plan -->
+
+		<div class="n-plan__plan tabs-pane" id="tab3">
+
+
+			<div class="n-plan__values">
+
+				<div class="n-plan__values__container">
+
+					<div class="n-plan__values__value">
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Верхняя одежда</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-31"></a>
+								<div class="n-plan__values__cont">
+									<p>31</p><span>SA.AN</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-43"></a>
+								<div class="n-plan__values__cont">
+									<p>43</p><span>Шубы</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Детские товары</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-1"></a>
+								<div class="n-plan__values__cont">
+									<p>1</p><span>Детский&nbsp;мир</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-5"></a>
+								<div class="n-plan__values__cont">
+									<p>5</p><span>Gulliver</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-6"></a>
+								<div class="n-plan__values__cont">
+									<p>6</p><span>Reima</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-10"></a>
+								<div class="n-plan__values__cont">
+									<p>10</p><span>Kapika</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-15"></a>
+								<div class="n-plan__values__cont">
+									<p>15</p><span>Конфетти</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-21"></a>
+								<div class="n-plan__values__cont">
+									<p>21</p><span>Левушка</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-26"></a>
+								<div class="n-plan__values__cont">
+									<p>26</p><span>САБОТАЖ</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-27"></a>
+								<div class="n-plan__values__cont">
+									<p>27</p><span>KINDER</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-28"></a>
+								<div class="n-plan__values__cont">
+									<p>28</p><span>Acoola</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-30"></a>
+								<div class="n-plan__values__cont">
+									<p>30</p><span>Маруся</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-36"></a>
+								<div class="n-plan__values__cont">
+									<p>36</p><span>Тутти-Фрутти</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-39"></a>
+								<div class="n-plan__values__cont">
+									<p>39</p><span>Sweet&nbsp;Berry</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-40"></a>
+								<div class="n-plan__values__cont">
+									<p>40</p><span>МЕДВЕЖОНОК</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-13"></a>
+								<div class="n-plan__values__cont">
+									<p>13</p><span>Ботик</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-32"></a>
+								<div class="n-plan__values__cont">
+									<p>32</p><span>Медвежонок</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Другое</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-51"></a>
+								<div class="n-plan__values__cont">
+									<p>51</p><span>Папироска</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Книги, творчество</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-16"></a>
+								<div class="n-plan__values__cont">
+									<p>16</p><span>Буквоед</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-20"></a>
+								<div class="n-plan__values__cont">
+									<p>20</p><span>Иголочка</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Кожгалантерея, сумки, аксессуары</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-33"></a>
+								<div class="n-plan__values__cont">
+									<p>33</p><span>David&nbsp;Jones</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-34"></a>
+								<div class="n-plan__values__cont">
+									<p>34</p><span>ШляПо</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-46"></a>
+								<div class="n-plan__values__cont">
+									<p>46</p><span>Stela</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Мужская одежда</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-23"></a>
+								<div class="n-plan__values__cont">
+									<p>23</p><span>For&nbsp;Men</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Нижнее Белье</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-7"></a>
+								<div class="n-plan__values__cont">
+									<p>7</p><span>DIM</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Обувь</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-44"></a>
+								<div class="n-plan__values__cont">
+									<p>44</p><span>Skechers</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Одежда</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-8"></a>
+								<div class="n-plan__values__cont">
+									<p>8</p><span>NIKA&nbsp;SHOP</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-17"></a>
+								<div class="n-plan__values__cont">
+									<p>17</p><span>Streetdivision</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-29"></a>
+								<div class="n-plan__values__cont">
+									<p>29</p><span>Буду&nbsp;мамой</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-41"></a>
+								<div class="n-plan__values__cont">
+									<p>41</p><span>Tom&nbsp;Farr</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-53"></a>
+								<div class="n-plan__values__cont">
+									<p>53</p><span>Amnesia</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Развлечения</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-2"></a>
+								<div class="n-plan__values__cont">
+									<p>2</p><span>7D&nbsp;AVATAR</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-47"></a>
+								<div class="n-plan__values__cont">
+									<p>47</p><span>Игротека</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Спортивные товары</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-3"></a>
+								<div class="n-plan__values__cont">
+									<p>3</p><span>ADIDAS</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-19"></a>
+								<div class="n-plan__values__cont">
+									<p>19</p><span>Quiksilver</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-22"></a>
+								<div class="n-plan__values__cont">
+									<p>22</p><span>Anta</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-25"></a>
+								<div class="n-plan__values__cont">
+									<p>25</p><span>Спортмастер</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-37"></a>
+								<div class="n-plan__values__cont">
+									<p>37</p><span>Sneaker&nbsp;Archive</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-45"></a>
+								<div class="n-plan__values__cont">
+									<p>45</p><span>Vitawin</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-52"></a>
+								<div class="n-plan__values__cont">
+									<p>52</p><span>North&nbsp;Fit</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Товары для дома, бытовая техника, электроника</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-4"></a>
+								<div class="n-plan__values__cont">
+									<p>4</p><span>М.Видео</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-9"></a>
+								<div class="n-plan__values__cont">
+									<p>9</p><span>Вещи и&nbsp;сны</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-12"></a>
+								<div class="n-plan__values__cont">
+									<p>12</p><span>Хобби</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-24"></a>
+								<div class="n-plan__values__cont">
+									<p>24</p><span>Аквафор</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-35"></a>
+								<div class="n-plan__values__cont">
+									<p>35</p><span>Мебельер</span>
+								</div>
+							</div>
+						</div>
+
+											</div><!-- .n-plan__values__ins -->
+
+					<div class="n-plan__values__header n-plan__values__header--color1" >
+						<span>Услуги</span>
+					</div>
+					<div class="n-plan__values__ins">
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-18"></a>
+								<div class="n-plan__values__cont">
+									<p>18</p><span>Планета&nbsp;танцев</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="n-plan__values__check">
+							<div class="n-plan__values__box">
+								<a href=".t3-42"></a>
+								<div class="n-plan__values__cont">
+									<p>42</p><span>ВООБРАЖУЛЯ</span>
+								</div>
+							</div>
+						</div>
+
+											</div>
+
+				</div>
+
+
+			</div>
+			<!-- /.n-plan__values__container -->
+
+		</div>
+		<!-- /.n-plan__values -->
+
+		<div class="n-plan__inside">
+
+			<div class="n-plan__plan__name n-plan__plan__name--name1">ул. Поморская</div>
+			<div class="n-plan__plan__name n-plan__plan__name--name2">пр. Советских Космонавтов</div>
+			<div class="n-plan__plan__name n-plan__plan__name--name3">ул. Воскресенская</div>
+			<div class="n-plan__plan__name n-plan__plan__name--name4">пр. Обводный Канал</div>
+			<div class="n-plan__plan__exit n-plan__plan__exit--exit5 hover tip" original-title="Лифт" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/saltpeper.png"></div>
+			<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder1"></div>
+			<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder2"></div>
+			<div class="n-plan__plan__elevator"></div>
+
+			<div class="n-p__second">
+				<svg width="650px" height="510px" viewBox="0 0 650 505">
+					<style type="text/css">
+
+					</style>
+					<g class="n-plan__plan__svg">
+						<path class="st3 t3-51 hover tip" original-title="Папироска" data-phone="+7 (8182) 42–46–15, 8–800–333–20–94" data-thumb="" data-newstitle="" data-newslink="" d="M200.1,359l19,18l10-11l-18-17L200.1,359z"/>
+						<path class="st3 t3-50 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M293.1,366h30v15h-30V366z"/>
+						<path class="st3 t3-49 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M461.1,366h30v15h-30V366z"/>
+						<path class="st3 t3-48 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M585.1,244h17v23h-17V244z"/>
+						<path class="st3 t3-47 hover tip" original-title="Игротека" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M140.1,244h17v23h-17V244z"/>
+						<path class="st3 t3-46 hover tip" original-title="Stela" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M168.1,274h38v37h-14.6c-8.2-7.9-15.5-15-19.4-19c-3.6-3.7-4-7-4-7V274z"/>
+						<path class="st3 t3-45 hover tip" original-title="Vitawin" data-phone="8–800–555–84–16, +7 (8182) 42–27–23" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/Vitawin---------------------.png" data-newstitle="" data-newslink="" d="M243,354l-1-0.1c-2.8-0.4-8.5-2.1-15-8.9c-8.8-9.2-22.8-21.7-34.5-33h55.5v42C248.1,354,241.9,353.9,243,354z"
+						/>
+						<path class="st3 t3-44 hover tip" original-title="Skechers" data-phone="+7 (8182) 29–30–71" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/Skechers---------------------.jpg" data-newstitle="" data-newslink="" d="M249.1,284h39v70h-39V284z"/>
+						<path class="st3 t3-43 hover tip" original-title="Шубы" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M289.1,284h39v70h-39V284z"/>
+						<path class="st3 t3-42 hover tip" original-title="ВООБРАЖУЛЯ" data-phone="8 (818) 242-36-23" data-thumb="" data-newstitle="Модные прически в детской парикмахерской Воображуля" data-newslink="http://titanarena.ru/block6/modnie-pricheski-v-detskoi-parikmaherskoi-voobrajula/" d="M329.1,275h27v49h-27V274z"/>
+						<path class="st3 t3-41 hover tip" original-title="Tom Farr" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/03/69278d5655400cbc733e7130cb7e00a163ad1ff9---------------------.png" data-newstitle="" data-newslink="" d="M423.1,312h45v42h-45V312z"/>
+						<path class="st3 t3-40 hover tip" original-title="МЕДВЕЖОНОК" data-phone="+7–900–919–65–73" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/--------------------.jpg" data-newstitle="Летние скидки в Медвежонке" data-newslink="http://titanarena.ru/block6/letnie-skidki-v-medvezhonke/" d="M423.1,283h45v28h-45V283z"/>
+						<path class="st3 t3-39 hover tip" original-title="Sweet Berry" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/Sweet-Berry---------------------.png" data-newstitle="" data-newslink="" d="M469.1,283h30v71h-30V283z"/>
+						<path class="st3 t3-38 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M532.1,328.8v0.2l-26,25h-6v-69v-2h40v38L532.1,328.8z"/>
+						<path class="st3 t3-37 hover tip" original-title="Sneaker Archive" data-phone="+7–911–672–33–74" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/Sneaker-Archive---------------------.jpeg" data-newstitle="" data-newslink="" d="M541.1,283h32l0,6l-32,31.2V283z"/>
+						<path class="st3 t3-36 hover tip" original-title="Тутти-Фрутти" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/--------------------------------------------.jpg" data-newstitle="" data-newslink="" d="M541.1,235h32v47h-32V235z"/>
+						<path class="st3 t3-35 hover tip" original-title="Мебельер" data-phone="+7 (8182) 42–55–43" data-thumb="http://titanarena.ru/wp-content/uploads/2016/03/-------------------------------------.png" data-newstitle="Открылась студия по проектированию и изготовлению мебели Мебельер" data-newslink="http://titanarena.ru/block6/otkrylas-studiya-po-proektirovaniyu-i-izgotovleniyu-mebeli-mebeler-2/" d="M500.1,235h40v47h-40V235z"/>
+						<path class="st3 t3-34 hover tip" original-title="ШляПо" data-phone="+7–911–677–01–17" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/---------------------.jpg" data-newstitle="" data-newslink="" d="M499.1,237l-2,2h-21v43h23V237z"/>
+						<path class="st3 t3-33 hover tip" original-title="David Jones" data-phone="+7 (8182) 47–38–28, +7–981–563–56–72" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/David-Jones---------------------.jpg" data-newstitle="Распродажа летней коллекции в DAVID JONES!" data-newslink="http://titanarena.ru/block6/rasprodazha-letnej-kollekcii-v-david-jones/" d="M458.1,239h17v43h-17V239z"/>
+						<path class="st3 t3-32 hover tip" original-title="Медвежонок" data-phone="+7–900–919–65–73" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/-----------------------------------------.jpg" data-newstitle="«Школьные покупки» в Титан Арене" data-newslink="http://titanarena.ru/block6/school-purchase/" d="M423.1,239h34v43h-34V239z"/>
+						<path class="st3 t3-31 hover tip" original-title="SA.AN" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2014/07/SA.AN---------------------.png" data-newstitle="" data-newslink="" d="M329.1,239h27v34h-27V239z"/>
+						<path class="st3 t3-30 hover tip" original-title="Маруся" data-phone="+7–952–257–21–45" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/210--210.jpg" data-newstitle="«Школьные покупки» в Титан Арене" data-newslink="http://titanarena.ru/block6/school-purchase/" d="M289.1,239h39v44h-39V239z"/>
+						<path class="st3 t3-29 hover tip" original-title="Буду мамой" data-phone="+7 (8182) 42-20-09" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/-------------------1.jpg" data-newstitle="Последние дни распродажи в "Буду Мамой"!" data-newslink="http://titanarena.ru/block6/poslednie-dni-rasprodazhi-v-budu-mamoj/" d="M249.1,239h39v44h-39V239z"/>
+						<path class="st3 t3-28 hover tip" original-title="Acoola" data-phone="+7 (8182) 42-04-41" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/acoola---------------------.jpg" data-newstitle="СКИДКА 50% НА ВСЁ ИЗ КОЛЛЕКЦИИ ВЕСНА/ЛЕТО-2017" data-newslink="http://titanarena.ru/block6/skidka-50-na-vsyo-iz-kollekcii-vesnaleto-2017/" d="M207.1,235v76h41v-72h-5l-3-4H207.1z"/>
+						<path class="st3 t3-27 hover tip" original-title="KINDER" data-phone="+7–921–243–20–07, +7 (8182) 43–20–01" data-thumb="" data-newstitle="KINDER - официальный продавец детской и подростковой коллекции VAN CLIFF в Архангельске!" data-newslink="http://titanarena.ru/block6/kinder-van-cliff/" d="M168.1,235h38v38h-38V235z"/>
+						<path class="st3 t3-26 hover tip" original-title="САБОТАЖ" data-phone="+7 (8182) 46 24 78 доб. 208" data-thumb="" data-newstitle="" data-newslink="" d="M85.1,234h42v27h-42V234z"/>
+						<path class="st3 t3-25 hover tip" original-title="Спортмастер" data-phone="8–800–777–777–1, +7 (8182) 28–69–44" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/sportmaster-logo---------------------.jpg" data-newstitle="НА СТАРТ! ВНИМАНИЕ! ШКОЛА!" data-newslink="http://titanarena.ru/block6/na-start-vnimanie-shkola/" d="M208.1,424v47h-59c-35.3,0-64-28.7-64-64V262h42v33c0,0-1.9,12.1,6,20c17.5,17.6,53.4,51,70,67
+												c1.8,1.7,3.5,3.2,5,4.6L208.1,424L208.1,424z"/>
+						<path class="st3 t3-24 hover tip" original-title="Аквафор" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/--------------.jpg" data-newstitle="" data-newslink="" d="M209.1,424v-36.5c7.7,6.6,12,8.5,12,8.5h18v28H209.1z"/>
+						<path class="st3 t3-23 hover tip" original-title="For Men" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M247.1,396h40v39h-40V396z"/>
+						<path class="st3 t3-22 hover tip" original-title="Anta" data-phone="+7 (8182) 42-07-40" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/Anta---------------------.jpg" data-newstitle="" data-newslink="" d="M288.1,396h41v74h-41V396z"/>
+						<path class="st3 t3-21 hover tip" original-title="Левушка" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/------------------------e1500899642788.jpg" data-newstitle="" data-newslink="" d="M330.1,471v-75h38v107.3c-29.7-1.7-53.4-6.7-63.6-12.3h-28.4v-20H330.1z"/>
+						<path class="st3 t3-20 hover tip" original-title="Иголочка" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/-------------------------.gif" data-newstitle="" data-newslink="" d="M409.1,503.6c-5.8,0.3-11.8,0.4-18,0.4c-7.6,0-15-0.2-22-0.6V396h40V503.6z"/>
+						<path class="st3 t3-19 hover tip" original-title="Quiksilver" data-phone="+7 (960) 001-80-80" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/Quiksilver---------------------.png" data-newstitle="Вставайте на доску вместе с Quiksivler!" data-newslink="http://titanarena.ru/block6/vstavajte-na-dosku-vmeste-s-quiksivler/" d="M449.1,499.5c-11.2,1.9-24.5,3.4-39,4.1V396h39V499.5z"/>
+						<path class="st3 t3-18 hover tip" original-title="Планета танцев" data-phone="+7 (8182) 42–44–01" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/IMG_5421.jpg" data-newstitle="" data-newslink="" d="M491.1,471h13v20h-25.5c-5.7,3.1-15.7,6-28.5,8.3V396h41V471z"/>
+						<path class="st3 t3-17 hover tip" original-title="Streetdivision" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/Streetdivision---------------------.jpg" data-newstitle="" data-newslink="" d="M575,435H532V413s-0.248-23.738,0-24c9.285-9.814,39-40,39-40v86Z"/>
+						<path class="st3 t3-16 hover tip" original-title="Буквоед" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/07/--------------1.jpg" data-newstitle="Буквоед в Архангельске – плюс один" data-newslink="http://titanarena.ru/block6/bukvoed-v-arxangelske-plyus-od/" d="M616.1,413h21v9h8V316h-40l-33,32v87h44V413z"/>
+						<path class="st3 t3-15 hover tip" original-title="Конфетти" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/04/Untitled-1.jpg" data-newstitle="В Конфетти парад скидок!" data-newslink="http://titanarena.ru/block6/v-konfetti-parad-skidok/" d="M645.1,276h-29v10c0,0-1.9,13.6-3,18c-2,8-7,11-7,11h39V276z"/>
+						<path class="st3 t3-14 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M616.1,235h29v40h-29V235z"/>
+						<path class="st3 t3-13 hover tip" original-title="Ботик" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/-------------------------------.png" data-newstitle="«Школьные покупки» в Титан Арене" data-newslink="http://titanarena.ru/block6/school-purchase/" d="M616.1,190h29v44h-29V190z"/>
+						<path class="st3 t3-12 hover tip" original-title="Хобби" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M583.1,141h25v38h-25V141z"/>
+						<path class="st3 t3-11 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M563.1,141h19v38h-19V141z"/>
+						<path class="st3 t3-10 hover tip" original-title="Kapika" data-phone="+7–911–593–76–98" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/logo---------------------.png" data-newstitle="«Школьные покупки» в Титан Арене" data-newslink="http://titanarena.ru/block6/school-purchase/" d="M458.1,141h41v34h-41V141z"/>
+						<path class="st3 t3-9 hover tip" original-title="Вещи и сны" data-phone="+7 (8182) 43–16–93" data-thumb="" data-newstitle="С 1 апреля в сети магазинов Вещи и сны третья вещь в подарок!" data-newslink="http://titanarena.ru/block6/s-1-aprelya-v-seti-magazinov-veshhi-i-sny-tretya-veshh-v-podarok/" d="M417.1,141v38h9l4-4h27v-34H417.1z"/>
+						<path class="st3 t3-8 hover tip" original-title="NIKA SHOP" data-phone="" data-thumb="" data-newstitle="Встречаем новую коллекцию одежды в Nika Shop!" data-newslink="http://titanarena.ru/block6/vstrechaem-nov-kollekciu-v-nika-shop/" d="M396.1,141h20v38h-20V141z"/>
+						<path class="st3 t3-7 hover tip" original-title="DIM" data-phone="+7–911–874–94–09 " data-thumb="http://titanarena.ru/wp-content/uploads/2014/11/DIM_logo_600x600.png" data-newstitle="Новая коллекция от DIM!" data-newslink="http://titanarena.ru/block6/novaya-kollekciya-ot-dim/" d="M375.1,141h20v38h-20V141z"/>
+						<path class="st3 t3-6 hover tip" original-title="Reima" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2016/08/newlogo.png" data-newstitle="Reima- скандинавский специализированный брэнд детской функциональной одежды с 1944 года" data-newslink="http://titanarena.ru/block6/reima-1944/" d="M333.1,141h41v38h-41V141z"/>
+						<path class="st3 t3-5 hover tip" original-title="Gulliver" data-phone="+7 (8182) 42–07–50 " data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/Logo_Gulliver_RUS-----------.jpg" data-newstitle="«Школьные покупки» в Титан Арене" data-newslink="http://titanarena.ru/block6/school-purchase/" d="M289.1,141v34h36l3,4h4v-38H289.1z"/>
+						<path class="st3 t3-4 hover tip" original-title="М.Видео" data-phone="8–800–200–77–75, +7 (8182) 42–25–06" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/------------------------------------------------.png" data-newstitle="Покупайте выгодно! " data-newslink="http://titanarena.ru/block6/pokupajte-vygodno/" d="M289.1,49v91h211v35h5l4,4h53v-39h47v39h5v-12h31V96h-31V78h-33V65h-31V38h-166v11H289.1z"/>
+						<path class="st3 t3-3 hover tip" original-title="ADIDAS" data-phone="+7 (8182) 42-05-57" data-thumb="http://titanarena.ru/wp-content/uploads/2015/09/Adidas_Logo.svg_1.png" data-newstitle="" data-newslink="" d="M253.1,179l3-4h32V49h-29v25h-31v105H253.1z"/>
+						<path class="st3 t3-2 hover tip" original-title="7D AVATAR" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/7d-avatar---------------------.png" data-newstitle="" data-newslink="" d="M187.1,141h23v38h-23V141z"/>
+						<path class="st3 t3-1 hover tip" original-title="Детский мир" data-phone="+7 (8182) 42-14-06" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/f_47c574267bfa8---------------------.jpg" data-newstitle="«Школьные покупки» в Титан Арене" data-newslink="http://titanarena.ru/block6/school-purchase/" d="M186.1,140v39h-59v48l0,0l0,0h-76l0,0v0L0.4,91.4c-0.5-2.3-1.8-8,7.4-12.1L180.1,5l0,0l0,0l0,0l0,0v55h29v1h1
+												v79H186.1z"/>
+						<text x="468" y="378"class="st90">49</text>
+						<text transform="matrix(1 0 0 1 112.111 124.0949)" class="st90">1</text>
+						<text transform="matrix(1 0 0 1 253.0555 124.0948)" class="st90">3</text>
+						<text transform="matrix(1 0 0 1 429.5556 99.0949)" class="st90">4</text>
+						<text transform="matrix(1 0 0 1 195.5552 163.0001)" class="st90">2</text>
+						<text transform="matrix(1 0 0 1 307.0552 162.0001)" class="st90">5</text>
+						<text transform="matrix(1 0 0 1 349.1109 162.0001)" class="st90">6</text>
+						<text transform="matrix(1 0 0 1 381.1108 163.0001)" class="st90">7</text>
+						<text transform="matrix(1 0 0 1 401.1108 163.0001)" class="st90">8</text>
+						<text transform="matrix(1 0 0 1 429.5554 162.9999)" class="st90">9</text>
+						<text transform="matrix(1 0 0 1 470.0553 163.0004)" class="st90">10</text>
+						<text transform="matrix(1 0 0 1 565.0555 163.0001)" class="st90">11</text>
+						<text transform="matrix(1 0 0 1 585.0553 163.0001)" class="st90">12</text>
+						<text transform="matrix(1 0 0 1 96.1109 254)" class="st90">26</text>
+						<text transform="matrix(1 0 0 1 121.1109 405.7289)" class="st90">25</text>
+						<text transform="matrix(1 0 0 1 140.0553 262)" class="st90">47</text>
+						<text transform="matrix(1 0 0 1 178.4732 259.4997)" class="st90">27</text>
+						<text transform="matrix(1 0 0 1 182.6109 295.4999)" class="st90">46</text>
+						<text transform="matrix(1 0 0 1 208.0553 367.9999)" class="st90">51</text>
+						<text transform="matrix(1 0 0 1 213.0556 414.5001)" class="st90">24</text>
+						<text transform="matrix(1 0 0 1 219.2982 279.9998)" class="st90">28</text>
+						<text transform="matrix(1 0 0 1 221.2982 331.9999)" class="st90">45</text>
+						<text transform="matrix(1 0 0 1 260.0556 266.9998)" class="st90">29</text>
+						<text transform="matrix(1 0 0 1 260.0554 320.1999)" class="st90">44</text>
+						<text transform="matrix(1 0 0 1 258.0555 415.4997)" class="st90">23</text>
+						<text transform="matrix(1 0 0 1 299.1105 267.0001)" class="st90">30</text>
+						<text transform="matrix(1 0 0 1 299.1104 320.2)" class="st90">43</text>
+						<text transform="matrix(1 0 0 1 300.1105 378.9999)" class="st90">50</text>
+						<text transform="matrix(1 0 0 1 300.1107 434.9999)" class="st90">22</text>
+						<text transform="matrix(1 0 0 1 333.0555 263.0003)" class="st90">31</text>
+						<text transform="matrix(1 0 0 1 333.0556 319.0001)" class="st90">42</text>
+						<text transform="matrix(1 0 0 1 338.0556 435.0002)" class="st90">21</text>
+						<text transform="matrix(1 0 0 1 381.1107 435)" class="st90">20</text>
+						<text transform="matrix(1 0 0 1 423.0557 434.9999)" class="st90">19</text>
+						<text transform="matrix(1 0 0 1 462.0553 435.0002)" class="st90">18</text>
+						<text transform="matrix(1 0 0 1 429.5554 267)" class="st90">32</text>
+						<text transform="matrix(1 0 0 1 437.0552 301.5998)" class="st90">40</text>
+						<text transform="matrix(1 0 0 1 437.0556 333.9052)" class="st90">41</text>
+						<text transform="matrix(1 0 0 1 459.0555 267.0001)" class="st90">33</text>
+						<text transform="matrix(1 0 0 1 478.5552 266.9998)" class="st90">34</text>
+						<text transform="matrix(1 0 0 1 476.0553 324.0945)" class="st90">39</text>
+						<text transform="matrix(1 0 0 1 511.6108 266.9999)" class="st90">35</text>
+						<text transform="matrix(1 0 0 1 511.611 314)" class="st90">38</text>
+						<text transform="matrix(1 0 0 1 548.111 267.9997)" class="st90">36</text>
+						<text transform="matrix(1 0 0 1 546.1111 296.5)" class="st90">37</text>
+						<text transform="matrix(1 0 0 1 586.0553 261.9999)" class="st90">48</text>
+						<text transform="matrix(1 0 0 1 624.5552 218.9051)" class="st90">13</text>
+						<text transform="matrix(1 0 0 1 624.5554 262.0003)" class="st90">14</text>
+						<text transform="matrix(1 0 0 1 624.5549 301.6)" class="st90">15</text>
+						<text transform="matrix(1 0 0 1 541.0552 405.729)" class="st90">17</text>
+						<text transform="matrix(1 0 0 1 606.0552 373.5)" class="st90">16</text>
+					</g>
+                    <!--28/06/2017 start-->
+                    <!-- new -->
+
+                    <!--<path id="_45" data-name="45" class="st3" d="M246.961,354L246,353.907c-2.845-.394-8.45-2.085-15-8.908-8.847-9.215-22.8-21.735-34.515-33H252v42S245.894,353.939,246.961,354Z"/>
+                    <path id="_46" data-name="46" class="st3" d="M172,274h38v37H195.445c-8.249-7.935-15.472-14.955-19.445-19-3.622-3.688-4-7-4-7V274Z"/>
+                    <rect id="_47" data-name="47" class="st3" x="144" y="244" width="17" height="23"/>
+                    <rect id="_50" data-name="50" class="st3" x="297" y="366" width="30" height="15"/>
+                    <path id="_51" data-name="51" class="st3" d="M204,359l19,18,10-11-18-17Z"/>
+
+                    <path id="_44-2" data-name="44" class="st3" d="M535,413H508V396h21l6-7v24Z"/>-->
+                    <!-- new -->
+
+                    <rect class="st3 t3-56 hover tip" original-title="Живые краски" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="360" y="195" width="16" height="11"/>
+                    <rect class="st3 t3-57 hover tip" original-title="Armelle" data-phone="8–800–333–33–29" data-thumb="" data-newstitle="" data-newslink="" x="360" y="210" width="16" height="11"/>
+
+
+                    <text transform="matrix(.75 0 0 .75 362 204)" class="st90">56</text>
+                    <text transform="matrix(.75 0 0 .75 362 220)" class="st90">57</text>
+
+					<!-- 52 -->
+						<path class="st3 t3-52 hover tip" original-title="NORTH FIT" data-phone="+7 (965) 731-77-88" data-thumb="" data-newstitle="" data-newslink="" d="M535,413H504V396h21l6-7v24Z"></path>
+						<text transform="matrix(1 0 0 1 510 410)" class="st90">52</text>
+
+					<!-- 53 -->
+						<rect class="st3 t3-53 hover tip" original-title="Amnesia" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="329" y="325" width="27" height="28" data-hasqtip="152"></rect>
+						<text transform="matrix(1 0 0 1 333 344)" class="st90">53</text>
+                    <!--28/06/2017 end-->
+					<filter id="drop-shadow">
+						<feGaussianBlur in="SourceAlpha" stdDeviation="2.2"></feGaussianBlur>
+						<feOffset dx="3" dy="4" result="offsetblur"></feOffset>
+						<feFlood flood-color="rgba(0,0,0,0.3)"></feFlood>
+						<feComposite in2="offsetblur" operator="in"></feComposite>
+						<feMerge>
+							<feMergeNode></feMergeNode>
+							<feMergeNode in="SourceGraphic"></feMergeNode>
+						</feMerge>
+					</filter>
+				</svg>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /.n-plan__plan -->
+
+	<div class="n-plan__plan tabs-pane" id="tab4">
+
+
+		<div class="n-plan__values">
+
+			<div class="n-plan__values__container">
+
+				<div class="n-plan__values__value">
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Другое</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-15"></a>
+							<div class="n-plan__values__cont">
+								<p>15</p><span>Pegas&nbsp;Touristik</span>
+							</div>
+						</div>
+					</div>
+
+									</div><!-- .n-plan__values__ins -->
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Еда, кафе, fast food</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Cock&#39;s&nbsp;Band</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Bubble&nbsp;Maker</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Мороженое</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Yougumi</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>MilkyMoon&#39;s</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-5"></a>
+							<div class="n-plan__values__cont">
+								<p>5</p><span>Wok&#038;Roll</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-6"></a>
+							<div class="n-plan__values__cont">
+								<p>6</p><span>Mexicano</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-7"></a>
+							<div class="n-plan__values__cont">
+								<p>7</p><span>Wok &&nbsp;Roll</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-8"></a>
+							<div class="n-plan__values__cont">
+								<p>8</p><span>Cook’s&nbsp;Band</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-9"></a>
+							<div class="n-plan__values__cont">
+								<p>9</p><span>Superburg</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-10"></a>
+							<div class="n-plan__values__cont">
+								<p>10</p><span>McDonalds</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-11"></a>
+							<div class="n-plan__values__cont">
+								<p>11</p><span>Крошка&nbsp;Картошка</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-12"></a>
+							<div class="n-plan__values__cont">
+								<p>12</p><span>DJ&nbsp;БЛИН</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-18"></a>
+							<div class="n-plan__values__cont">
+								<p>18</p><span>Sweets</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-2"></a>
+							<div class="n-plan__values__cont">
+								<p>2</p><span>МИРАЖ&nbsp;СИНЕМА</span>
+							</div>
+						</div>
+					</div>
+
+									</div><!-- .n-plan__values__ins -->
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Развлечения</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-1"></a>
+							<div class="n-plan__values__cont">
+								<p>1</p><span>ЛЕДОВАЯ&nbsp;АРЕНА</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-4"></a>
+							<div class="n-plan__values__cont">
+								<p>4</p><span>Игроленд</span>
+							</div>
+						</div>
+					</div>
+
+									</div><!-- .n-plan__values__ins -->
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Товары для дома, бытовая техника, электроника</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-3"></a>
+							<div class="n-plan__values__cont">
+								<p>3</p><span>GAME&nbsp;ZONE</span>
+							</div>
+						</div>
+					</div>
+
+									</div><!-- .n-plan__values__ins -->
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Услуги</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Пегас&nbsp;ТА</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-19"></a>
+							<div class="n-plan__values__cont">
+								<p>19</p><span>Гардероб</span>
+							</div>
+						</div>
+					</div>
+
+									</div>
+
+			</div>
+
+
+		</div>
+		<!-- /.n-plan__values__container -->
+
+	</div>
+	  <div class="n-plan__inside">
+
+		<div class="n-plan__plan__name n-plan__plan__name--name1">ул. Поморская</div>
+		<div class="n-plan__plan__name n-plan__plan__name--name2">пр. Советских Космонавтов</div>
+		<div class="n-plan__plan__name n-plan__plan__name--name3">ул. Воскресенская</div>
+		<div class="n-plan__plan__name n-plan__plan__name--name4">пр. Обводный Канал</div>
+		<div class="n-plan__plan__exit n-plan__plan__exit--exit5 hover tip" original-title="Лифт" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/saltpeper.png"></div>
+		<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder1"></div>
+		<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder2"></div>
+		<div class="n-plan__plan__elevator"></div>
+
+		<div class="n-p__second">
+			<svg width="650px" height="510px" viewBox="0 0 650 505">
+				<style type="text/css">
+
+				</style>
+				<g class="n-plan__plan__svg">
+					<path class="st99" d="M612.8,38H359.1v464.9c9.5,0.7,19.6,1.1,30.2,1.1c40.4,0,75-5.9,88.1-13h25.7v-20H635c5.6,0,10.1-4.5,10.1-10
+												V70L612.8,38z"/>
+					<path class="st99" d="M209.1,38l-17-38L7.7,79.3c-9.2,4.1-7.8,9.8-7.4,12.1L85.1,318v89c0,35.3,28.7,64,64,64h127v20h28.4
+												c9.4,5.2,30.2,9.8,56.6,11.9V38H209.1z"/>
+										<path class="st4 t4-19 hover tip" original-title="Гардероб" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M450.1,249h41v16h-41V220z"/>
+					<path class="st4 t4-18 hover tip" original-title="Sweets" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M355.1,195h20v18h-20V301z"/>
+					<path class="st4 t4-17 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M355.1,214h20v18h-20V301z"/>
+					<path class="st4 t4-16 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M355.1,233h20v18h-20V301z"/>
+					<path class="st4 t4-15 hover tip" original-title="Pegas Touristik" data-phone="+7–911–589–07–27" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/Pegas-Touristik---------------------.jpg" data-newstitle="" data-newslink="" d="M297.1,279h42v31h-42V311z"/>
+					<path class="st4 t4-14 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M297.1,311h42v31h-42V311z"/>
+					<path class="st4 t4-13 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M297.1,343h42v31h-42V343z"/>
+					<path class="st4 t4-12 hover tip" original-title="DJ БЛИН" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M297.1,375h42v25h-42V375z"/>
+					<path class="st4 t4-11 hover tip" original-title="Крошка Картошка" data-phone="+7‒964‒291‒96‒03" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/4_11---------------------.png" data-newstitle="" data-newslink="" d="M319.1,401h20v29h-20V401z"/>
+					<path class="st4 t4-10 hover tip" original-title="McDonalds" data-phone="+7 (8182) 42-14-68" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/mcdonalds---------------------.jpg" data-newstitle="Монополия в Макдоналдс" data-newslink="http://titanarena.ru/block6/monopoliya-v-makdonalds/" d="M297.1,401h21v30h21v69.4c-15.8-2.4-28-5.7-34.6-9.4h-18.4v-44h11V401z"/>
+					<path class="st4 t4-9 hover tip" original-title="Superburg" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/4_9---------------------.png" data-newstitle="" data-newslink="" d="M450.1,458h42v32h-42V458z"/>
+					<path class="st4 t4-8 hover tip" original-title="Cook’s Band" data-phone="7‒952‒309‒01‒44" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/4_8_Cooks-Band---------------------.jpg" data-newstitle="" data-newslink="" d="M450.1,431h42v26h-42V431z"/>
+					<path class="st4 t4-7 hover tip" original-title="Wok & Roll" data-phone="+7 (8182) 46-03-54" data-thumb="" data-newstitle="" data-newslink="" d="M450.1,398h42v21h-42V398z"/>
+					<path class="st4 t4-6 hover tip" original-title="Mexicano" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M450.1,343h42v54h-42V343z"/>
+					<path class="st4 t4-5 hover tip" original-title="Wok&Roll" data-phone="+7 (8182) 49‒21‒92" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/4_5_WokRoll---------------------.png" data-newstitle="" data-newslink="" d="M450.1,306h52v36h-52V306z"/>
+					<path class="st4 t4-4 hover tip" original-title="Игроленд" data-phone="+7–900–915–39–62" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/-------------------------------------.png" data-newstitle="" data-newslink="" d="M634.1,295h-8v-22l8-1v-6h-184v39h53v88h131V295z"/>
+										<path class="st4 t4-3 hover tip" original-title="GAME ZONE" data-phone="+7–981–557–44–24" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/4_3_Game-Zone---------------------.jpg" data-newstitle="" data-newslink="" d="M450.1,220h41v28h-41V220z"/>
+					<path class="st4 t4-2 hover tip" original-title="МИРАЖ СИНЕМА" data-phone="8–800–505–17–85" data-thumb="http://titanarena.ru/wp-content/uploads/2015/09/logo-01.jpg" data-newstitle="В кафе кинотеатра «Мираж Синема» вы найдёте блюда по своему вкусу" data-newslink="http://titanarena.ru/block6/bluda-v-kafe-kinoteatra-miraj-sinema/" d="M247.1,38v140h203v8h42v79h153V100h-53V38H247.1z"/>
+					<path class="st4 t4-1 hover tip" original-title="ЛЕДОВАЯ АРЕНА" data-phone="+7–921–074–02–75" data-thumb="" data-newstitle="" data-newslink="" d="M246.1,179h43v8h-28v29h28v177h-43v19h-40v-10h-121v-84l-1-2.7V226h-21V72L51.5,60.5L164.1,12v60h82V179z"/>
+					<text transform="matrix(1 0 0 1 165.1665 242.4999)" class="st90">1</text>
+					<text transform="matrix(1 0 0 1 502.0552 113.8239)" class="st90">2</text>
+					<text transform="matrix(1 0 0 1 558.6111 323.9999)" class="st90">4</text>
+										<text transform="matrix(1 0 0 1 465.6107 239.7292)" class="st90">3</text>
+					<text transform="matrix(1 0 0 1 312.5554 331.4999)" class="st90">14</text>
+					<text transform="matrix(1 0 0 1 312.5554 298.4999)" class="st90">15</text>
+					<text transform="matrix(1 0 0 1 358.5554 246.4999)" class="st90">16</text>
+					<text transform="matrix(1 0 0 1 358.5554 227.4999)" class="st90">17</text>
+					<text transform="matrix(1 0 0 1 358.5554 208.4999)" class="st90">18</text>
+					<text transform="matrix(1 0 0 1 465.6107 331.4998)" class="st90">5</text>
+					<text transform="matrix(1 0 0 1 312.5553 363.7292)" class="st90">13</text>
+					<text transform="matrix(1 0 0 1 465.6106 380.7292)" class="st90">6</text>
+					<text transform="matrix(1 0 0 1 312.5551 393)" class="st90">12</text>
+					<text transform="matrix(1 0 0 1 460.1108 415.4999)" class="st90">7</text>
+					<text transform="matrix(1 0 0 1 306.1111 458.0001)" class="st90">10</text>
+					<text transform="matrix(1 0 0 1 320.5278 420.4999)" class="st90">11</text>
+					<text transform="matrix(1 0 0 1 460.1108 450.6962)" class="st90">8</text>
+					<text transform="matrix(1 0 0 1 460.1109 479.458)" class="st90">9</text>
+										<text transform="matrix(1 0 0 1 463.6107 261.7292)" class="st90">19</text>
+                    <!--28/06/2017 start-->
+                    <!-- new -->
+                    <rect class="st4 t4-20 hover tip" original-title="Джелато Шоколато" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="368" y="345" width="18" height="11"/>
+                    <rect class="st4 t4-21 hover tip" original-title="MilkyMoon's" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="395" y="345" width="18" height="11"/>
+                    <text transform="matrix(.75 0 0 .75 371 354)" class="st90">20</text>
+                    <text transform="matrix(.75 0 0 .75 398 354)" class="st90">21</text>
+                    <!--28/06/2017 end-->
+				</g>
+
+				<filter id="drop-shadow">
+					<feGaussianBlur in="SourceAlpha" stdDeviation="2.2"></feGaussianBlur>
+					<feOffset dx="3" dy="4" result="offsetblur"></feOffset>
+					<feFlood flood-color="rgba(0,0,0,0.3)"></feFlood>
+					<feComposite in2="offsetblur" operator="in"></feComposite>
+					<feMerge>
+						<feMergeNode></feMergeNode>
+						<feMergeNode in="SourceGraphic"></feMergeNode>
+					</feMerge>
+				</filter>
+			</svg>
+		</div>
+
+	</div>
+	</div><!-- /.n-plan__plan -->
+
+  <div class="n-plan__plan tabs-pane" id="tab5">
+
+
+		<div class="n-plan__values">
+
+			<div class="n-plan__values__container">
+
+				<div class="n-plan__values__value">
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Другое</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-15"></a>
+							<div class="n-plan__values__cont">
+								<p>15</p><span>Pegas&nbsp;Touristik</span>
+							</div>
+						</div>
+					</div>
+
+				</div><!-- .n-plan__values__ins -->
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Еда, кафе, fast food</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Cock&#39;s&nbsp;Band</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Bubble&nbsp;Maker</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Мороженое</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Yougumi</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>MilkyMoon&#39;s</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-5"></a>
+							<div class="n-plan__values__cont">
+								<p>5</p><span>Wok&#038;Roll</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-6"></a>
+							<div class="n-plan__values__cont">
+								<p>6</p><span>Mexicano</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-7"></a>
+							<div class="n-plan__values__cont">
+								<p>7</p><span>Wok &&nbsp;Roll</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-8"></a>
+							<div class="n-plan__values__cont">
+								<p>8</p><span>Cook’s&nbsp;Band</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-9"></a>
+							<div class="n-plan__values__cont">
+								<p>9</p><span>Superburg</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-10"></a>
+							<div class="n-plan__values__cont">
+								<p>10</p><span>McDonalds</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-11"></a>
+							<div class="n-plan__values__cont">
+								<p>11</p><span>Крошка&nbsp;Картошка</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-12"></a>
+							<div class="n-plan__values__cont">
+								<p>12</p><span>DJ&nbsp;БЛИН</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-18"></a>
+							<div class="n-plan__values__cont">
+								<p>18</p><span>Sweets</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-2"></a>
+							<div class="n-plan__values__cont">
+								<p>2</p><span>МИРАЖ&nbsp;СИНЕМА</span>
+							</div>
+						</div>
+					</div>
+
+									</div><!-- .n-plan__values__ins -->
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Развлечения</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-1"></a>
+							<div class="n-plan__values__cont">
+								<p>1</p><span>ЛЕДОВАЯ&nbsp;АРЕНА</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-4"></a>
+							<div class="n-plan__values__cont">
+								<p>4</p><span>Игроленд</span>
+							</div>
+						</div>
+					</div>
+
+									</div><!-- .n-plan__values__ins -->
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Товары для дома, бытовая техника, электроника</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-3"></a>
+							<div class="n-plan__values__cont">
+								<p>3</p><span>GAME&nbsp;ZONE</span>
+							</div>
+						</div>
+					</div>
+
+									</div><!-- .n-plan__values__ins -->
+
+				<div class="n-plan__values__header n-plan__values__header--color1" >
+					<span>Услуги</span>
+				</div>
+				<div class="n-plan__values__ins">
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-"></a>
+							<div class="n-plan__values__cont">
+								<p></p><span>Пегас&nbsp;ТА</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="n-plan__values__check">
+						<div class="n-plan__values__box">
+							<a href=".t4-19"></a>
+							<div class="n-plan__values__cont">
+								<p>19</p><span>Гардероб</span>
+							</div>
+						</div>
+					</div>
+
+									</div>
+
+			</div>
+
+
+		</div>
+		<!-- /.n-plan__values__container -->
+
+	</div>
+	  <div class="n-plan__inside">
+
+		<div class="n-plan__plan__name n-plan__plan__name--name1">ул. Поморская</div>
+		<div class="n-plan__plan__name n-plan__plan__name--name2">пр. Советских Космонавтов</div>
+		<div class="n-plan__plan__name n-plan__plan__name--name3">ул. Воскресенская</div>
+		<div class="n-plan__plan__name n-plan__plan__name--name4">пр. Обводный Канал</div>
+		<div class="n-plan__plan__exit n-plan__plan__exit--exit5 hover tip" original-title="Лифт" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/saltpeper.png"></div>
+		<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder1"></div>
+		<div class="n-plan__plan__ladder n-plan__plan__ladder--ladder2"></div>
+		<div class="n-plan__plan__elevator"></div>
+
+		<div class="n-p__second">
+			<svg width="650px" height="510px" viewBox="0 0 650 505">
+				<style type="text/css">
+
+				</style>
+				<g class="n-plan__plan__svg">
+					<path class="st99" d="M612.8,38H359.1v464.9c9.5,0.7,19.6,1.1,30.2,1.1c40.4,0,75-5.9,88.1-13h25.7v-20H635c5.6,0,10.1-4.5,10.1-10
+												V70L612.8,38z"/>
+					<path class="st99" d="M209.1,38l-17-38L7.7,79.3c-9.2,4.1-7.8,9.8-7.4,12.1L85.1,318v89c0,35.3,28.7,64,64,64h127v20h28.4
+												c9.4,5.2,30.2,9.8,56.6,11.9V38H209.1z"/>
+										<path class="st4 t4-19 hover tip" original-title="Гардероб" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M450.1,249h41v16h-41V220z"/>
+					<path class="st4 t4-18 hover tip" original-title="Sweets" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M355.1,195h20v18h-20V301z"/>
+					<path class="st4 t4-17 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M355.1,214h20v18h-20V301z"/>
+					<path class="st4 t4-16 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M355.1,233h20v18h-20V301z"/>
+					<path class="st4 t4-15 hover tip" original-title="Pegas Touristik" data-phone="+7–911–589–07–27" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/Pegas-Touristik---------------------.jpg" data-newstitle="" data-newslink="" d="M297.1,279h42v31h-42V311z"/>
+					<path class="st4 t4-14 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M297.1,311h42v31h-42V311z"/>
+					<path class="st4 t4-13 hover" original-title="" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M297.1,343h42v31h-42V343z"/>
+					<path class="st4 t4-12 hover tip" original-title="DJ БЛИН" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M297.1,375h42v25h-42V375z"/>
+					<path class="st4 t4-11 hover tip" original-title="Крошка Картошка" data-phone="+7‒964‒291‒96‒03" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/4_11---------------------.png" data-newstitle="" data-newslink="" d="M319.1,401h20v29h-20V401z"/>
+					<path class="st4 t4-10 hover tip" original-title="McDonalds" data-phone="+7 (8182) 42-14-68" data-thumb="http://titanarena.ru/wp-content/uploads/2014/12/mcdonalds---------------------.jpg" data-newstitle="Монополия в Макдоналдс" data-newslink="http://titanarena.ru/block6/monopoliya-v-makdonalds/" d="M297.1,401h21v30h21v69.4c-15.8-2.4-28-5.7-34.6-9.4h-18.4v-44h11V401z"/>
+					<path class="st4 t4-9 hover tip" original-title="Superburg" data-phone="" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/4_9---------------------.png" data-newstitle="" data-newslink="" d="M450.1,458h42v32h-42V458z"/>
+					<path class="st4 t4-8 hover tip" original-title="Cook’s Band" data-phone="7‒952‒309‒01‒44" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/4_8_Cooks-Band---------------------.jpg" data-newstitle="" data-newslink="" d="M450.1,431h42v26h-42V431z"/>
+					<path class="st4 t4-7 hover tip" original-title="Wok & Roll" data-phone="+7 (8182) 46-03-54" data-thumb="" data-newstitle="" data-newslink="" d="M450.1,398h42v21h-42V398z"/>
+					<path class="st4 t4-6 hover tip" original-title="Mexicano" data-phone="" data-thumb="" data-newstitle="" data-newslink="" d="M450.1,343h42v54h-42V343z"/>
+					<path class="st4 t4-5 hover tip" original-title="Wok&Roll" data-phone="+7 (8182) 49‒21‒92" data-thumb="http://titanarena.ru/wp-content/uploads/2017/03/4_5_WokRoll---------------------.png" data-newstitle="" data-newslink="" d="M450.1,306h52v36h-52V306z"/>
+					<path class="st4 t4-4 hover tip" original-title="Игроленд" data-phone="+7–900–915–39–62" data-thumb="http://titanarena.ru/wp-content/uploads/2017/01/-------------------------------------.png" data-newstitle="" data-newslink="" d="M634.1,295h-8v-22l8-1v-6h-184v39h53v88h131V295z"/>
+										<path class="st4 t4-3 hover tip" original-title="GAME ZONE" data-phone="+7–981–557–44–24" data-thumb="http://titanarena.ru/wp-content/uploads/2014/08/4_3_Game-Zone---------------------.jpg" data-newstitle="" data-newslink="" d="M450.1,220h41v28h-41V220z"/>
+					<path class="st4 t4-2 hover tip" original-title="МИРАЖ СИНЕМА" data-phone="8–800–505–17–85" data-thumb="http://titanarena.ru/wp-content/uploads/2015/09/logo-01.jpg" data-newstitle="В кафе кинотеатра «Мираж Синема» вы найдёте блюда по своему вкусу" data-newslink="http://titanarena.ru/block6/bluda-v-kafe-kinoteatra-miraj-sinema/" d="M247.1,38v140h203v8h42v79h153V100h-53V38H247.1z"/>
+					<path class="st4 t4-1 hover tip" original-title="ЛЕДОВАЯ АРЕНА" data-phone="+7–921–074–02–75" data-thumb="" data-newstitle="" data-newslink="" d="M246.1,179h43v8h-28v29h28v177h-43v19h-40v-10h-121v-84l-1-2.7V226h-21V72L51.5,60.5L164.1,12v60h82V179z"/>
+					<text transform="matrix(1 0 0 1 165.1665 242.4999)" class="st90">1</text>
+					<text transform="matrix(1 0 0 1 502.0552 113.8239)" class="st90">2</text>
+					<text transform="matrix(1 0 0 1 558.6111 323.9999)" class="st90">4</text>
+										<text transform="matrix(1 0 0 1 465.6107 239.7292)" class="st90">3</text>
+					<text transform="matrix(1 0 0 1 312.5554 331.4999)" class="st90">14</text>
+					<text transform="matrix(1 0 0 1 312.5554 298.4999)" class="st90">15</text>
+					<text transform="matrix(1 0 0 1 358.5554 246.4999)" class="st90">16</text>
+					<text transform="matrix(1 0 0 1 358.5554 227.4999)" class="st90">17</text>
+					<text transform="matrix(1 0 0 1 358.5554 208.4999)" class="st90">18</text>
+					<text transform="matrix(1 0 0 1 465.6107 331.4998)" class="st90">5</text>
+					<text transform="matrix(1 0 0 1 312.5553 363.7292)" class="st90">13</text>
+					<text transform="matrix(1 0 0 1 465.6106 380.7292)" class="st90">6</text>
+					<text transform="matrix(1 0 0 1 312.5551 393)" class="st90">12</text>
+					<text transform="matrix(1 0 0 1 460.1108 415.4999)" class="st90">7</text>
+					<text transform="matrix(1 0 0 1 306.1111 458.0001)" class="st90">10</text>
+					<text transform="matrix(1 0 0 1 320.5278 420.4999)" class="st90">11</text>
+					<text transform="matrix(1 0 0 1 460.1108 450.6962)" class="st90">8</text>
+					<text transform="matrix(1 0 0 1 460.1109 479.458)" class="st90">9</text>
+										<text transform="matrix(1 0 0 1 463.6107 261.7292)" class="st90">19</text>
+                    <!--28/06/2017 start-->
+                    <!-- new -->
+                    <rect class="st4 t4-20 hover tip" original-title="Джелато Шоколато" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="368" y="345" width="18" height="11"/>
+                    <rect class="st4 t4-21 hover tip" original-title="MilkyMoon's" data-phone="" data-thumb="" data-newstitle="" data-newslink="" x="395" y="345" width="18" height="11"/>
+                    <text transform="matrix(.75 0 0 .75 371 354)" class="st90">20</text>
+                    <text transform="matrix(.75 0 0 .75 398 354)" class="st90">21</text>
+                    <!--28/06/2017 end-->
+				</g>
+
+				<filter id="drop-shadow">
+					<feGaussianBlur in="SourceAlpha" stdDeviation="2.2"></feGaussianBlur>
+					<feOffset dx="3" dy="4" result="offsetblur"></feOffset>
+					<feFlood flood-color="rgba(0,0,0,0.3)"></feFlood>
+					<feComposite in2="offsetblur" operator="in"></feComposite>
+					<feMerge>
+						<feMergeNode></feMergeNode>
+						<feMergeNode in="SourceGraphic"></feMergeNode>
+					</feMerge>
+				</filter>
+			</svg>
+		</div>
+
+	</div>
+	</div><!-- /.n-plan__plan -->
+
+	</div>
+	<!-- /.tabs-content -->
+
+	</div>
+	<!-- /.n-plan__container -->
+
+	</div>
+
+</section>
+<!-- end main -->
+
+
+		<div class="footer-crutch"></div>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+		try {
+		w.yaCounter25606769 = new Ya.Metrika({id:25606769,
+		webvisor:true,
+		clickmap:true,
+		trackLinks:true,
+		accurateTrackBounce:true});
+		} catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+		s = d.createElement("script"),
+		f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+		d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+	</div>
+
+	<!-- footer -->
+	<footer>
+
+		<!-- ins -->
+		<div class="ins">
+
+			<!-- footer-left -->
+			<div class="footer-left">
+				<div class="menu-menu_vnuzy-container"><ul id="menu-menu_vnuzy" class="menu"><li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://titanarena.ru/vakansii/">Вакансии</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://titanarena.ru/arendatoram/">Арендаторам</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="http://titanarena.ru/karta-sajta/">Карта&nbsp;сайта</a></li>
+</ul></div>				<!-- <a href="" target="_blank" class="autor">разработка <img src="/images/autor.png" alt="">Digital агентство F5</a> -->
+			</div>
+			<!-- end footer-left -->
+
+			<!-- footer-center -->
+			<div class="footer-center">
+				<h2>ТРК "Титан Арена"</h2>
+				<p>Торгово-развлекательный комплекс Титан Арена удовлетворит желания и потребности самого привередливого покупателя. У нас вы найдете все, от брендовой одежды до круглогодичной ледовой арены.<!--кинотеатров нового формата <a href="http://titanarena.f5-test.ru/imax-kinoteatr/">IMAX.</a>--></p>
+			</div>
+			<!-- end footer-center -->
+
+			<!-- footer-right -->
+			<div class="footer-right">
+				<a target="_blank" class="vk" href="https://vk.com/trk_titan_arena">Vkontakte</a>
+				<a target="_blank" class="fb" href="https://www.facebook.com/trk.titan.arena">Facebook</a>
+				<!--<a class="tw" href="">Twitter</a>-->
+				<p>г. Архангельск, ул. Воскресенская, 20</p>
+				<!--<p class="phone-footer">8182 24-64-47</p>-->
+			</div>
+			<!-- end footer-right -->
+
+		</div>
+		<!-- end ins -->
+	</footer>
+	<!-- end footer -->
+
+	<!-- end wrapper -->
+	<script type='text/javascript' src='http://titanarena.ru/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/titanarena.ru\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"\u041e\u0442\u043f\u0440\u0430\u0432\u043a\u0430..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://titanarena.ru/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.9.1'></script>
+		</body>
+</html>
