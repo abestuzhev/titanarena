@@ -87,8 +87,8 @@ text {
   padding-bottom: 37px;
 }
 .n-plan__buttons {
-  width: 384px;
-  margin: 0px auto;
+  width: 100%;
+  text-align: center;
 }
 .n-plan__buttons:after {
   clear: both;
@@ -96,7 +96,7 @@ text {
   display: block;
 }
 .n-plan__buttons__button {
-  float: left;
+  display: inline-block;
   width: 80px;
   border: 1px solid #fff;
   margin-right: 20px;
@@ -478,6 +478,17 @@ text {
   -o-transition: all 0.12s ease-in-out;
   transition: all 0.12s ease-in-out;
 }
+
+.st5:hover {
+  fill: #00651f !important;
+  cursor: pointer;
+  -webkit-transition: all 0.12s ease-in-out;
+  -moz-transition: all 0.12s ease-in-out;
+  -ms-transition: all 0.12s ease-in-out;
+  -o-transition: all 0.12s ease-in-out;
+  transition: all 0.12s ease-in-out;
+}
+
 .qtip {
   background: #fff;
   padding-top: 5px;
