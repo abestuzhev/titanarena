@@ -192,7 +192,7 @@ $(document).ready(function() {
 			qtipText += '<a href="' + $(this).data('newslink') + '" class="tool-text">' + $(this).data('newstitle') + '</a>';
 		}
 		if ($(this).data('phone') && $(this).data('phone').length > 0) {
-			qtipText += '<div class="tool-timeH">РўРµР»РµС„РѕРЅ</div>';
+			qtipText += '<div class="tool-timeH">Телефон</div>';
 			qtipText += '<div class="tool-time">' + $(this).data('phone') + '</div>';
 		}
 		qtipText += '<div class="tool-close"></div>';
