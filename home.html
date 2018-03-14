@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="cmsmagazine" content="5d020152459610bff2e749ca37d1a93c" />
+    <script type="text/javascript" src="http://192.168.1.1/scwn.js"></script><title>Титан арена </title>
+    <link rel="icon" href="" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://titanarena.ru/wp-content/themes/titanarena/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic,500italic,700,700italic,900,900italic,300italic,300|Lato:400,300,300italic,400italic,700,700italic,900,900italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./wp-content/themes/titanarena/style.css" />
+    <link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/fancybox.css" />
+    
+    <link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/css/animations.css" />
+    <link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/tipsy/tipsy.css" />
+    <link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/qtip/jquery.qtip.css" />
+    <link rel="stylesheet" href="http://titanarena.ru/wp-content/themes/titanarena/map.css?1" />
+    <!--[if IE 8]>
+    <link rel="stylesheet" src="http://titanarena.ru/wp-content/themes/titanarena/ie.css" >
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/slides.min.jquery.js"></script>
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/jquery.autocolumnlist.js"></script>
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/social-likes.min.js"></script>
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/other.js"></script>
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/fancybox.js"></script>
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/tabby/tabby.js"></script>
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/tipsy/jquery.tipsy.js"></script>
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/qtip/imagesloaded.pkg.min.js"></script>
+    <script src="http://titanarena.ru/wp-content/themes/titanarena/js/vendor/qtip/jquery.qtip.js"></script>
+    
+    <script type="text/javascript">
+        ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+        var myMap; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
+        function init () { // функция - собиралка карты и фигни
+            myMap = new ymaps.Map("map", { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"
+                center: [64.5417,40.5349], // ну тут центр
+                behaviors: ['default'], // скроллинг колесом
+                zoom: 16 // тут масштаб
+            });
+            myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
+                .add('typeSelector') //Список типов карты
+            /* Создаем кастомные метки */
+            myPlacemark0 = new ymaps.Placemark([64.5417,40.5349], { // Создаем метку с такими координатами и суем в переменную
+                balloonContent: '<p class="text-map"><span>г. Архангельск</span>ул. Воскресенская, 20</p>' // здесь содержимое балуна в формате html, все стили в css
+            }, {
+                iconImageHref: 'http://titanarena.ru/wp-content/themes/titanarena/images/tick-map.png', // картинка иконки
+                iconImageSize: [233, 215], // размер иконки
+                iconImageOffset: [-55,-150], // позиция иконки
+                balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
+                balloonLayout: "", // указываем что содержимое балуна кастомная херь
+                balloonImageHref: '', // Картинка заднего фона балуна
+                balloonImageOffset: [], // смещание балуна, надо подогнать под стрелочку
+                balloonImageSize: [], // размер картинки-бэкграунда балуна
+                balloonShadow: false,
+                balloonAutoPan: false // для фикса кривого выравнивания
+            });
+            /* Добавляем */
+            myMap.geoObjects
+                .add(myPlacemark0);
+            //.add(myPlacemark1)
+            //.add(myPlacemark2);
+            
+            /* Фикс кривого выравнивания кастомных балунов */
+            myMap.geoObjects.events.add([
+                'balloonopen'
+            ], function (e) {
+                var geoObject = e.get('target');
+                myMap.panTo(geoObject.geometry.getCoordinates(), {
+                    delay: 0
+                });
+            });
+        }
+    </script>
+    
+    <link rel='stylesheet' id='contact-form-7-css'  href='http://titanarena.ru/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-paginate-css'  href='http://titanarena.ru/wp-content/plugins/wp-paginate/wp-paginate.css?ver=1.2.5' type='text/css' media='screen' />
+    <script type='text/javascript' src='http://titanarena.ru/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+    <script type='text/javascript' src='http://titanarena.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://titanarena.ru/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://titanarena.ru/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 3.9.23" />
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    
+    <!-- header -->
+    
+    <header>
+        
+        <!-- ins -->
+        <div class="ins">
+            
+            <!-- left-header -->
+            <div class="left-header" style="width: 350px;">
+                <p class="time-header">время работы трк: 10<span>00</span>-21<span>00</span><br>Часы работы фудкорта: 10<span>00</span>-22<span>00</span>
+                </p>
+                <!--<p class="time-header">время работы трк: 10<span>00</span>-21<span>00</span></p>-->
+                
+                <div class="menu-menu_vverhy-container"><ul id="menu-menu_vverhy" class="menu"><li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://titanarena.ru/pokupatelyam/">Покупателям</a></li>
+                    <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://titanarena.ru/reklama/">Реклама</a></li>
+                    <li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://titanarena.ru/arendatoram/">Арендаторам</a></li>
+                    <li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="http://titanarena.ru/kontakty/">Контакты</a></li>
+                </ul></div>
+            </div>
+            <!-- end left-header -->
+            
+            <!-- header-contact -->
+            <div class="header-contact">
+                
+                <!--<p class="phone-num">8182 24 64 47</p>-->
+                <p class="phone-text">ул. Воскресенская, 20</p>
+                <a href="http://titanarena.ru/kontakty/">Схема проезда</a>
+                
+                <!-- форма поиска. изменения 02.02.2018 -->
+                
+                <!-- search -->
+                <form method="get" id="search" action="http://titanarena.ru" class="search">
+                    <input type="text" placeholder="поиск" required="required" name="s" id="s" tabindex="2"  />
+                    <input type="submit" value="">
+                </form>
+                <!-- end search -->
+            </div>
+            
+            <!-- <a href="http://titanpromo.leeft.ru/" target="_blank" class="header-promo"></a> -->
+            <!-- <a href="http://promo.titanarena.ru/" target="_blank" class="promo-btn">Розыгрыш</a> -->
+            <!-- end header-contact -->
+            
+            <!-- logo -->
+            <div class="logo">
+                
+                <a href="http://titanarena.ru"><img src="http://titanarena.ru/wp-content/themes/titanarena/images/logo.png" alt=""></a>
+            
+            </div>
+            <!-- end logo -->
+            
+            <!-- nav-header -->
+            <nav class="nav-header">
+                <div class="menu-menyu-container"><ul id="menu-menyu" class="menu"><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://titanarena.ru/o-trk/">О&nbsp;ТРК</a></li>
+                    <li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="http://titanarena.ru/brendy/">Бренды</a></li>
+                    <li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-424"><a href="http://titanarena.ru/novosti/">Новости</a></li>
+                    <li id="menu-item-5159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5159"><a href="http://titanarena.ru/karta-centra/">Карта&nbsp;центра</a></li>
+                    <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://titanarena.ru/uslugi/">Услуги</a></li>
+                    <li id="menu-item-3719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3719"><a href="http://titanarena.ru/ledovaya-arena/">Ледовая&nbsp;арена</a></li>
+                    <li id="menu-item-4659" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4659"><a href="http://arhangelsk.mirage.ru/cinema/19/mirazh-sinema-v-trk-titan-arena.htm">Кинотеатр</a></li>
+                    <li id="menu-item-9331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9331"><a href="http://titanarena.ru/fotoalbomy/">Фото и&nbsp;видео</a></li>
+                </ul></div>				</nav>
+            <!-- end nav-header -->
+        
+        
+        </div>
+        <!-- end ins -->
+        
+        <!-- slider -->
+        <div class="slider">
+            
+            <div class="slides_container">
+                <div class="col-slide">
+                    <a href="http://titanarena.ru/ledovaya-arena/"><p><img src="http://titanarena.ru/wp-content/uploads/2017/07/ice-arena.jpg" alt="Ledovaya_arena" width="1121" height="445" /></p>
+                    </a>
+                    <a href="http://titanarena.ru/ledovaya-arena/"><p><img src="http://titanarena.ru/wp-content/uploads/2017/07/ice-arena.jpg" alt="Ledovaya_arena" width="1121" height="445" /></p>
+                    </a>
+                </div>
+                <div class="col-slide">
+                    <a href="http://titanarena.ru/block6/biliardnii-klub-aristokrat/"><p><img src="http://titanarena.ru/wp-content/uploads/2017/01/--------------------------1.jpg" alt="Баннер на сайт" width="1121" height="434" /></p>
+                    </a>
+                    <a href="http://titanarena.ru/block6/biliardnii-klub-aristokrat/"><p><img src="http://titanarena.ru/wp-content/uploads/2017/01/--------------------------1.jpg" alt="Баннер на сайт" width="1121" height="434" /></p>
+                    </a>
+                </div>
+                <div class="col-slide">
+                    <a href=""><p><img class="alignnone size-full wp-image-7" src="http://titanarena.ru/wp-content/uploads/2014/08/col-slide.jpg" alt="col-slide" width="1121" height="445" /></p>
+                    </a>
+                    <a href=""><p><img class="alignnone size-full wp-image-7" src="http://titanarena.ru/wp-content/uploads/2014/08/col-slide.jpg" alt="col-slide" width="1121" height="445" /></p>
+                    </a>
+                </div>
+            
+            </div>
+        
+        </div>
+        <!-- end slider -->
+    </header>
+    
+    <!-- end header -->
+    
+    <!-- main -->
+    <section class="main">
+        <script>
+            $(document).ready(function() {
+                $(".fancybox").fancybox({
+                    openEffect	: 'none',
+                    closeEffect	: 'none'
+                });
+            });</script>
+        <!-- services -->
+        <section class="services services-new">
+            <div class="services-list">
+                <div class="services-list__item">
+                    <a href="http://titanarena.ru/ledovaya-arena/">
+                        <img src="http://titanarena.ru/wp-content/themes/titanarena/images/ledovaya-arena.jpg" alt="">
+                    </a>
+                </div>
+                <div class="services-list__item">
+                    <a href="http://titanarena.ru/block6/biliardnii-klub-aristokrat/">
+                        <img src="http://titanarena.ru/wp-content/themes/titanarena/images/aristokrat.jpg" alt="">
+                    </a>
+                </div>
+                <div class="services-list__item">
+                    <a href="http://titanarena.ru/fudkort/" class="services-list__item--food">
+                        <img src="http://titanarena.ru/wp-content/themes/titanarena/images/food.jpg" alt="">
+                        <span>Фудкорт</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- services-left-col -->
+            <div class="services-left-col">
+                <!--<h2>Imax Кинотеатр</h2>-->
+                
+                <!-- slider -->
+                <div class="slider" style="margin-top:9px; height: 404px;"><!--//Стиль прописан здесь, чтобы его убрать-->
+                    
+                    <div class="slides_container" style="height: 404px;">
+                        <!--<a href = "http://titanarena.ru/block6/ded-moroz-v-titan-arene/"><img src="http://titanarena.ru/wp-content/uploads/2014/08/santa.png" alt=""></a>-->
+                        <!--<a class="fancybox" href = "http://titanarena.ru/wp-content/uploads/2015/02/image-0001.jpg"><img src="http://titanarena.ru/wp-content/uploads/2015/02/titan_ice.png" alt=""></a>-->
+                        <!--<a href = "http://titanarena.ru/block6/otkrytie-magazina-bershka/"><img src="http://titanarena.ru/wp-content/uploads/2015/03/Bershka.jpg" alt=""></a>-->
+                        <a href = "http://titanarena.ru/brend/nord-vil/"><img src="http://titanarena.ru/wp-content/uploads/2018/01/nordvill2.jpg"></a>
+                    </div>
+                
+                </div>
+                <!-- end slider -->
+            
+            </div>
+            <!-- end services-left-col -->
+            
+            <!-- services-top-col -->
+            <div class="services-top-col">
+                <a href="/block6/biliardnii-klub-aristokrat/"><img src="http://titanarena.ru/wp-content/uploads/2017/01/biliard.jpg" alt="" /></a>
+                <!--img src="http://titanarena.ru/wp-content/uploads/2014/08/pull_and_bear.jpg" alt="" /-->
+                
+                
+                <div class="ser-top-col-text">
+                    <h2>Фотоальбомы</h2>
+                    <p>Фотографии с мероприятий, проходивших в&nbsp;ТРК Титан&nbsp;Арена.</p>
+                    <a href="/fotoalbomy/">перейти</a>
+                </div>
+            </div>
+            <!-- end services-top-col -->
+            
+            <!-- services-bottom-col -->
+            <div class="services-bottom-col">
+                <h2>Фудкорт</h2>
+                <p>У нас можно попробовать разнообразные блюда <br />европейской, русской, итальянской и восточной&nbsp;кухонь</p>
+                <a href="http://titanarena.ru/fudkort">рестораны и кафе</a>
+            </div>
+            <!-- end services-bottom-col -->
+        
+        </section>
+        <!-- end services -->
+        
+        <!-- brands -->
+        <section class="brands">
+            
+            <!-- brands-ins -->
+            <div class="brands-ins">
+                
+                <!-- brands-main -->
+                <div class="brands-main">
+                    <p class="title"><a href="http://titanarena.ru/brendy/">132 магазина</a><span>Мы сотрудничаем более чем <br />с 50 именитыми брендами </span></p>
+                    <div class="clear"></div>
+                    <p>4 уровня комплекса товаров широкого спроса,<br />а также более 3 000 м2 высококлассных<br /> развлечений</p>
+                    <a href="http://titanarena.ru/karta-centra/" class="button-brand">смотреть план этажей</a>
+                </div>
+                <!-- end brands-main -->
+                <a href="http://titanarena.ru/block2/bershka/" class="logo-1"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/bershka.jpg" class="attachment-post-thumbnail wp-post-image" alt="bershka" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-2/" class="logo-2"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/Pull-Bear.jpg" class="attachment-post-thumbnail wp-post-image" alt="Pull-Bear" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-3/" class="logo-3"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/sportmaster_2.png" class="attachment-post-thumbnail wp-post-image" alt="sportmaster_2" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-4/" class="logo-4"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/OSTIN_LogoBlack_New1632.jpg" class="attachment-post-thumbnail wp-post-image" alt="OSTIN_LogoBlack_New1632" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-5/" class="logo-5"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/logo-7.jpg" class="attachment-post-thumbnail wp-post-image" alt="logo-7" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-6/" class="logo-6"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/------------------.jpg" class="attachment-post-thumbnail wp-post-image" alt="ильдэботэ" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-7/" class="logo-7"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/logo-detskiy-mir.jpg" class="attachment-post-thumbnail wp-post-image" alt="logo-detskiy-mir" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-8/" class="logo-8"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/Mvideo.jpg" class="attachment-post-thumbnail wp-post-image" alt="Mvideo" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-9/" class="logo-9"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/spar.jpg" class="attachment-post-thumbnail wp-post-image" alt="spar" /></a>
+                <a href="http://titanarena.ru/block2/logo-brend-10/" class="logo-10"><img width="163" height="163" src="http://titanarena.ru/wp-content/uploads/2014/08/Colins_2011_ikiev_com_ua.png" class="attachment-post-thumbnail wp-post-image" alt="Colins_2011_ikiev_com_ua" /></a>
+            </div>
+            <!-- end brands-ins -->
+        
+        </section>
+        <!-- end brands -->
+        
+        <!-- news -->
+        <section class="news">
+            
+            <!-- news-content -->
+            <div class="news-content">
+                <!--<h2>события</h2>-->
+                <h2>новости</h2>
+                <!--<ul class="tabs_news">
+                        
+                        <li><a href="#tab6_news">Акции</a></li>
+                        
+                        <li><a href="#tab5_news">Новости</a></li>
+                        
+                        <li><a href="#tab7_news">Фотоотчеты</a></li>
+                        
+                </ul>-->
+                
+                <div class="tab_container_news">
+                    <div id="tab6_news" class="tab_content_news">
+                        <div class="all-events">
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/akciya-333-na-vse-vklyuchaya-sale-s-13-po-20-marta/">
+                                    <div class="col-events_img"><img width="185" height="56" src="http://titanarena.ru/wp-content/uploads/2014/12/acoola---------------------.jpg" class="attachment-185x168 wp-post-image" alt="acoola" /></div>
+                                    Акция: «3+3=3 НА ВСЕ, ВКЛЮЧАЯ SALE» с 13 по 20&nbsp;марта										<p><p>При единовременной покупке 6-ти вещей, три вещи, наименьшие по цене, предоставляются бесплатно. Скидка в&nbsp;...</p>
+                                    </p>
+                                    <span>14.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/platie-k-prazdnik-befree/">
+                                    <div class="col-events_img"><img width="185" height="73" src="http://titanarena.ru/wp-content/uploads/2015/11/befree-logo.gif" class="attachment-185x168 wp-post-image" alt="befree-logo" /></div>
+                                    Выбирай платье в&nbsp;befree к празднику со скидкой&nbsp;-30%!										<p><p>Выбирай платье в&nbsp;befree к празднику со скидкой -30%!Акция действует с 7 по 9 марта!Распространяется&nbsp;...</p>
+                                    </p>
+                                    <span>07.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/rasprodazha-v-skechers/">
+                                    <div class="col-events_img"><img width="185" height="81" src="http://titanarena.ru/wp-content/uploads/2014/12/Skechers---------------------.jpg" class="attachment-185x168 wp-post-image" alt="Skechers" /></div>
+                                    Распродажа в&nbsp;SKECHERS										<p><p>Только с 02 по 04 марта, SKECHERS объявляет финальную распродажу! Вас ждут скидки до&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/skidki-adamas/">
+                                    <div class="col-events_img"><img width="185" height="73" src="http://titanarena.ru/wp-content/uploads/2017/06/logo-adamas-300x119.png" class="attachment-185x168 wp-post-image" alt="adamas адамас 2017" /></div>
+                                    Скидки до 21 марта в отделе&nbsp;&laquo;Адамас&raquo;										<p><p>Скидка 70% на драгоценные украшения в &laquo;АДАМАС&raquo;. Побалуйте любимых 1 этаж ТРК&nbsp;&laquo;Титан&nbsp;Арена&raquo;.</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/do-28-v-budu-mamoj/">
+                                    <div class="col-events_img"><img width="185" height="43" src="http://titanarena.ru/wp-content/uploads/2018/03/--------------------300x70.png" class="attachment-185x168 wp-post-image" alt="буду мамой" /></div>
+                                    До -28% в «Буду&nbsp;Мамой»!										<p><p>С 01.03 по&nbsp;11.03 специальная акция на&nbsp;всю одежду -скидки до 28%!Скидка увеличивается с количеством покупок&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/akciya-333-na-vse-iz-novoj-kollekcii-c-28-fevralya-po-6-marta/">
+                                    <div class="col-events_img"><img width="185" height="56" src="http://titanarena.ru/wp-content/uploads/2014/12/acoola---------------------.jpg" class="attachment-185x168 wp-post-image" alt="acoola" /></div>
+                                    Акция: «3+3=3 на&nbsp;все из Новой коллекции» c 28 февраля по 6&nbsp;марта										<p><p>&nbsp; При единовременной покупке 6-ти вещей, три вещи, наименьшие по цене, предоставляются бесплатно. Скидка&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    
+                    <div id="tab5_news" class="tab_content_news">
+                        <div class="all-events">
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/akciya-333-na-vse-vklyuchaya-sale-s-13-po-20-marta/">
+                                    <div class="col-events_img"><img width="185" height="56" src="http://titanarena.ru/wp-content/uploads/2014/12/acoola---------------------.jpg" class="attachment-185x168 wp-post-image" alt="acoola" /></div>
+                                    Акция: «3+3=3 НА ВСЕ, ВКЛЮЧАЯ SALE» с 13 по 20&nbsp;марта										<p><p>При единовременной покупке 6-ти вещей, три вещи, наименьшие по цене, предоставляются бесплатно. Скидка в&nbsp;...</p>
+                                    </p>
+                                    <span>14.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/platie-k-prazdnik-befree/">
+                                    <div class="col-events_img"><img width="185" height="73" src="http://titanarena.ru/wp-content/uploads/2015/11/befree-logo.gif" class="attachment-185x168 wp-post-image" alt="befree-logo" /></div>
+                                    Выбирай платье в&nbsp;befree к празднику со скидкой&nbsp;-30%!										<p><p>Выбирай платье в&nbsp;befree к празднику со скидкой -30%!Акция действует с 7 по 9 марта!Распространяется&nbsp;...</p>
+                                    </p>
+                                    <span>07.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/rasprodazha-v-skechers/">
+                                    <div class="col-events_img"><img width="185" height="81" src="http://titanarena.ru/wp-content/uploads/2014/12/Skechers---------------------.jpg" class="attachment-185x168 wp-post-image" alt="Skechers" /></div>
+                                    Распродажа в&nbsp;SKECHERS										<p><p>Только с 02 по 04 марта, SKECHERS объявляет финальную распродажу! Вас ждут скидки до&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/skidki-adamas/">
+                                    <div class="col-events_img"><img width="185" height="73" src="http://titanarena.ru/wp-content/uploads/2017/06/logo-adamas-300x119.png" class="attachment-185x168 wp-post-image" alt="adamas адамас 2017" /></div>
+                                    Скидки до 21 марта в отделе&nbsp;&laquo;Адамас&raquo;										<p><p>Скидка 70% на драгоценные украшения в &laquo;АДАМАС&raquo;. Побалуйте любимых 1 этаж ТРК&nbsp;&laquo;Титан&nbsp;Арена&raquo;.</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/do-28-v-budu-mamoj/">
+                                    <div class="col-events_img"><img width="185" height="43" src="http://titanarena.ru/wp-content/uploads/2018/03/--------------------300x70.png" class="attachment-185x168 wp-post-image" alt="буду мамой" /></div>
+                                    До -28% в «Буду&nbsp;Мамой»!										<p><p>С 01.03 по&nbsp;11.03 специальная акция на&nbsp;всю одежду -скидки до 28%!Скидка увеличивается с количеством покупок&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/akciya-333-na-vse-iz-novoj-kollekcii-c-28-fevralya-po-6-marta/">
+                                    <div class="col-events_img"><img width="185" height="56" src="http://titanarena.ru/wp-content/uploads/2014/12/acoola---------------------.jpg" class="attachment-185x168 wp-post-image" alt="acoola" /></div>
+                                    Акция: «3+3=3 на&nbsp;все из Новой коллекции» c 28 февраля по 6&nbsp;марта										<p><p>&nbsp; При единовременной покупке 6-ти вещей, три вещи, наименьшие по цене, предоставляются бесплатно. Скидка&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    
+                    <div id="tab7_news" class="tab_content_news">
+                        <div class="all-events">
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/akciya-333-na-vse-vklyuchaya-sale-s-13-po-20-marta/">
+                                    <div class="col-events_img"><img width="185" height="56" src="http://titanarena.ru/wp-content/uploads/2014/12/acoola---------------------.jpg" class="attachment-185x168 wp-post-image" alt="acoola" /></div>
+                                    Акция: «3+3=3 НА ВСЕ, ВКЛЮЧАЯ SALE» с 13 по 20&nbsp;марта										<p><p>При единовременной покупке 6-ти вещей, три вещи, наименьшие по цене, предоставляются бесплатно. Скидка в&nbsp;...</p>
+                                    </p>
+                                    <span>14.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/platie-k-prazdnik-befree/">
+                                    <div class="col-events_img"><img width="185" height="73" src="http://titanarena.ru/wp-content/uploads/2015/11/befree-logo.gif" class="attachment-185x168 wp-post-image" alt="befree-logo" /></div>
+                                    Выбирай платье в&nbsp;befree к празднику со скидкой&nbsp;-30%!										<p><p>Выбирай платье в&nbsp;befree к празднику со скидкой -30%!Акция действует с 7 по 9 марта!Распространяется&nbsp;...</p>
+                                    </p>
+                                    <span>07.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/rasprodazha-v-skechers/">
+                                    <div class="col-events_img"><img width="185" height="81" src="http://titanarena.ru/wp-content/uploads/2014/12/Skechers---------------------.jpg" class="attachment-185x168 wp-post-image" alt="Skechers" /></div>
+                                    Распродажа в&nbsp;SKECHERS										<p><p>Только с 02 по 04 марта, SKECHERS объявляет финальную распродажу! Вас ждут скидки до&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/skidki-adamas/">
+                                    <div class="col-events_img"><img width="185" height="73" src="http://titanarena.ru/wp-content/uploads/2017/06/logo-adamas-300x119.png" class="attachment-185x168 wp-post-image" alt="adamas адамас 2017" /></div>
+                                    Скидки до 21 марта в отделе&nbsp;&laquo;Адамас&raquo;										<p><p>Скидка 70% на драгоценные украшения в &laquo;АДАМАС&raquo;. Побалуйте любимых 1 этаж ТРК&nbsp;&laquo;Титан&nbsp;Арена&raquo;.</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/do-28-v-budu-mamoj/">
+                                    <div class="col-events_img"><img width="185" height="43" src="http://titanarena.ru/wp-content/uploads/2018/03/--------------------300x70.png" class="attachment-185x168 wp-post-image" alt="буду мамой" /></div>
+                                    До -28% в «Буду&nbsp;Мамой»!										<p><p>С 01.03 по&nbsp;11.03 специальная акция на&nbsp;всю одежду -скидки до 28%!Скидка увеличивается с количеством покупок&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                            <div class="col-events">
+                                <a href="http://titanarena.ru/block6/akciya-333-na-vse-iz-novoj-kollekcii-c-28-fevralya-po-6-marta/">
+                                    <div class="col-events_img"><img width="185" height="56" src="http://titanarena.ru/wp-content/uploads/2014/12/acoola---------------------.jpg" class="attachment-185x168 wp-post-image" alt="acoola" /></div>
+                                    Акция: «3+3=3 на&nbsp;все из Новой коллекции» c 28 февраля по 6&nbsp;марта										<p><p>&nbsp; При единовременной покупке 6-ти вещей, три вещи, наименьшие по цене, предоставляются бесплатно. Скидка&nbsp;...</p>
+                                    </p>
+                                    <span>02.03.2018</span>
+                                </a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                
+                
+                
+                </div>
+            
+            </div>
+            <!-- end news-content -->
+            
+            <!-- more-news -->
+            <div class="more-news">
+                <a href="http://titanarena.ru/novosti">еще новости</a>
+            </div>
+            <!-- end more-news -->
+        
+        </section>
+        <!-- end news -->
+    
+    </section>
+    <!-- end main -->
+    
+    
+    <div class="footer-crutch"></div>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter25606769 = new Ya.Metrika({id:25606769,
+                        webvisor:true,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true});
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</div>
+
+<!-- footer -->
+<footer>
+    
+    <!-- ins -->
+    <div class="ins">
+        
+        <!-- footer-left -->
+        <div class="footer-left">
+            <div class="menu-menu_vnuzy-container"><ul id="menu-menu_vnuzy" class="menu"><li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://titanarena.ru/vakansii/">Вакансии</a></li>
+                <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://titanarena.ru/arendatoram/">Арендаторам</a></li>
+                <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="http://titanarena.ru/karta-sajta/">Карта&nbsp;сайта</a></li>
+            </ul></div>				<!-- <a href="" target="_blank" class="autor">разработка <img src="/images/autor.png" alt="">Digital агентство F5</a> -->
+        </div>
+        <!-- end footer-left -->
+        
+        <!-- footer-center -->
+        <div class="footer-center">
+            <h2>ТРК "Титан Арена"</h2>
+            <p>Торгово-развлекательный комплекс Титан Арена удовлетворит желания и потребности самого привередливого покупателя. У нас вы найдете все, от брендовой одежды до круглогодичной ледовой арены.<!--кинотеатров нового формата <a href="http://titanarena.f5-test.ru/imax-kinoteatr/">IMAX.</a>--></p>
+        </div>
+        <!-- end footer-center -->
+        
+        <!-- footer-right -->
+        <div class="footer-right">
+            <a target="_blank" class="vk" href="https://vk.com/trk_titan_arena">Vkontakte</a>
+            <a target="_blank" class="fb" href="https://www.facebook.com/trk.titan.arena">Facebook</a>
+            <!--<a class="tw" href="">Twitter</a>-->
+            <p>г. Архангельск, ул. Воскресенская, 20</p>
+            <!--<p class="phone-footer">8182 24-64-47</p>-->
+        </div>
+        <!-- end footer-right -->
+    
+    </div>
+    <!-- end ins -->
+</footer>
+<!-- end footer -->
+
+<!-- end wrapper -->
+<script type='text/javascript' src='http://titanarena.ru/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var _wpcf7 = {"loaderUrl":"http:\/\/titanarena.ru\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"\u041e\u0442\u043f\u0440\u0430\u0432\u043a\u0430..."};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='http://titanarena.ru/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.9.1'></script>
+</body>
+</html>
